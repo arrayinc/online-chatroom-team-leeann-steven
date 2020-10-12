@@ -1,47 +1,68 @@
-# online-chatroom
-This is a duo-assignment for the Array Bootcamp to help with Sprint #3 of Array, which is the 4th and 5th week the students spend here at Array! This assignment will have the students create a complete online chat solution utilizing React, Redux, NodeJS and ExpressJS. Once again, the **interface** is completely you and your partner's choosing. Your chatroom will feature several different components! It will have a **homepage**, an **about** page and finally the full **chatbox** page!
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Technologies Required
+## Available Scripts
 
-- React
-- React Router
-- Redux
-- NodeJS
-- SocketIO
-- ExpressJS
-- React Bootstrap
+In the project directory, you can run:
 
-## Homepage Requirements
-Please choose a theme and make the homepage based on that theme. 
+### `npm start`
 
-1. Just some general information about what your chatbox discussion is for. 
-2. A general navigation element at the top, as well as making the homepage look as graphically nice as possible.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## About Requirements
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-1. Just another about page which includes the two authors information of the website.
+### `npm test`
 
-## Chatbox Requirements
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. The user should be able to access the site and see a general chatroom that they can access. 
-2. They can optionally choose to create their own chatroom that users will be able to see.
-3. They should be able to set their chatroom to private or public, the private version only being accessible by using a specific code.
-4. After selecting a chatbox, the user can set their own username for the chatroom. 
-5. They can set their own avatar as well.
-6. You can type into the chatbox and have a conversation (this is demonstrated with your partner).
-7. The user should be able to select a background color for their messages and it automatically makes the text either white or black.
-8. All users should be able to see who is in the chatroom (a list of users somewhere on the interface).
+### `npm run build`
 
-**NOTE: The site will be deployed to Heroku, the naming for the URL will be `name1-name2-chatroom.herokuapp.com`, where name1 and name2 are the first names of you and your partner. This will be a process that YOU WILL RESEARCH ON YOUR OWN, it will not be covered in class! You'll learn how to deploy it from the CLI!**
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Bonus #1
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-Make the chatroom even better by creating "private messages" between two users. You can click their username from the list of users and then select "private message" to open a private message with the user. You can then type and have a private conversation. 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Bonus #2
+### `npm run eject`
 
-Even further improve the chatbox by adding a "{Username} is typing..." indicator to the chatbox system. So if someone is typing, it should show they're typing. If multiple people are typing, it should show the first two and then say "{firstUsername}, {secondUsername} and {x} others are typing..." to signal that multiple users are typing. 
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Example: "Matt, Justice and 5 others are typing..." 
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-#### There are no additional tasks for this assignment as I believe these tasks will take all of the available time. 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
