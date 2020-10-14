@@ -4,13 +4,15 @@ height: 249px;
 }
 
 .card {
+    background-color: teal;
 width: 358px;
 }
 
-.card-body {
+/* .about-card-body {
+    background-color: darkgray;
     width: 358px;
     height: 225px;
-        }
+        } */
 
     .card-img {
 width: 358px;
