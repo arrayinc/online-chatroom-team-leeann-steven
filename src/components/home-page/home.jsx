@@ -41,7 +41,7 @@ export default class HomePage extends React.Component {
                             <Card className="text-center dark-card">
                                 <Card.Body>
                                     <Card.Title>
-                                        <h4>CREATE A <br></br>CUSTOM CHATROOM</h4>,c
+                                        <h4>CREATE A <br></br>CUSTOM CHATROOM</h4>
                                     </Card.Title>
                                     <Card.Text>
                                         <p>A little helper text</p>
