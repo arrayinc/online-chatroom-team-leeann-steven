@@ -7,7 +7,8 @@ import AboutPage from "./components/about-page/about-page.jsx"
 //import Navbar from "./components/navbar/navbar.jsx"
 function App() {
   return (
-    <AboutPage/>
+    // <AboutPage/>
+    <ChatBox/>
   );
 }
 
