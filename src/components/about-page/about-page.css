@@ -1,0 +1,22 @@
+.jumbotron {
+background: rgba(196, 196, 196, 0.5);
+height: 249px;
+}
+
+.card {
+width: 358px;
+}
+
+.card-body {
+    width: 358px;
+    height: 225px;
+        }
+
+    .card-img {
+width: 358px;
+height: 225px;
+    }
+
+.card-deck {
+width: 780px;    
+}
