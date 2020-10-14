@@ -1,0 +1,32 @@
+.jumbotron {
+    background-color: crimson;
+    color: white;
+    height: 250px;
+    text-align: center;
+}
+
+.text-container {
+    margin-bottom: 20px;
+}
+
+.card {
+    height: 275px;
+}
+
+.btn-rounded {
+    border-radius: 40px;
+    max-width: 165px;
+    min-width: 100px;
+    height: auto;
+    margin: 20px;
+}
+
+.light-card {
+    border: 3px black solid;
+    background-color: lightgray;
+}
+
+.dark-card {
+    background-color: darkgray;
+    color: white;
+}
