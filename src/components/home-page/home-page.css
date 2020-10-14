@@ -21,12 +21,12 @@
     margin: 20px;
 }
 
-.public-chat {
+.light-card {
     border: 3px black solid;
     background-color: lightgray;
 }
 
-.private-chat {
+.dark-card {
     background-color: darkgray;
     color: white;
 }

@@ -25,10 +25,10 @@ export default class HomePage extends React.Component {
                     </Row>
                     <Row className="d-flex justify-content-center">
                         <Col xs="4">
-                            <Card className="text-center public-chat">
+                            <Card className="text-center light-card">
                                 <Card.Body>
                                     <Card.Title>
-                                        Join the public chat
+                                        <h4>JOIN THE <br></br>PUBLIC CHATROOM</h4>
                                     </Card.Title>
                                     <Card.Text>
                                         A little helper text
@@ -38,10 +38,14 @@ export default class HomePage extends React.Component {
                             </Card>
                         </Col>
                         <Col xs="4">
-                            <Card className="text-center private-chat">
+                            <Card className="text-center dark-card">
                                 <Card.Body>
-                                    <h5>Create a private chat</h5>
-                                    <p>A little helper text</p>
+                                    <Card.Title>
+                                        <h4>CREATE A <br></br>CUSTOM CHATROOM</h4>
+                                    </Card.Title>
+                                    <Card.Text>
+                                        <p>A little helper text</p>
+                                    </Card.Text>
                                 </Card.Body>
                                 <Button variant="info" className="btn-rounded align-self-center">Join</Button>
                             </Card>
