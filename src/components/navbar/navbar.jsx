@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { NavLink } from "react-router-dom";
 //import logo from './images/i-voted.png';
 import './navbar.css';
 

@@ -33,7 +33,7 @@ export default class AboutPage extends React.Component {
               <center><CardDeck>
           <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src= {LeeAnn} />
-  <Card.Body>
+  <Card.Body className="about-card-body">
     <Card.Title>LeeAnn</Card.Title>
     <Card.Text>
       Here's some info about LeeAnn!
@@ -43,7 +43,7 @@ export default class AboutPage extends React.Component {
 </Card>
 <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src= {Steven} />
-  <Card.Body>
+  <Card.Body className="about-card-body">
     <Card.Title>Steven</Card.Title>
     <Card.Text>
     Here's some info about Steven!

@@ -25,7 +25,7 @@ export default class HomePage extends React.Component {
                     </Row>
                     <Row className="d-flex justify-content-center">
                         <Col xs="4">
-                            <Card className="text-center light-card">
+                            <Card className="text-center">
                                 <Card.Body>
                                     <Card.Title>
                                         <h4>JOIN THE <br></br>PUBLIC CHATROOM</h4>
@@ -38,7 +38,7 @@ export default class HomePage extends React.Component {
                             </Card>
                         </Col>
                         <Col xs="4">
-                            <Card className="text-center dark-card">
+                            <Card className="text-center">
                                 <Card.Body>
                                     <Card.Title>
                                         <h4>CREATE A <br></br>CUSTOM CHATROOM</h4>
