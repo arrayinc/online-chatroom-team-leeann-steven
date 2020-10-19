@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Staatliches&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Staatliches', 'Monserrat','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,3 +12,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.jumbotron {
+  height: 250px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(213,1,1,1) 0%, rgba(73,9,121,1) 50%, rgba(0,35,209,1) 100%)!important;
+  border-radius: 0!important;
+}
+
+h5 {
+  color: #343A40;
+}
+
+p, h3, h4, h5 {
+  font-size: 18px;
+  
+}
+
+
+h1 {
+  font-family: 'Staatliches';
+  letter-spacing: .1em;
+  line-height: 1.4em;
+  color: white;
+  font-size: 110px;
+}
+
+h2 {
+  font-family: 'Staatliches';
+  letter-spacing: .1em;
+  line-height: 1.4em;
+  font-size: 60px;
+}
+

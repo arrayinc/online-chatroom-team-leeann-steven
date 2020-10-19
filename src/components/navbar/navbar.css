@@ -1,3 +1,18 @@
 .nav-pill {
-    border: solid black 2px;
+    background-color: white;
+    color: #343A40!important;
+    border-radius: 5px;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.nav-link {
+    margin-right: 20px;
+}
+
+.navbar-bg {
+    background-color: rgba(0,0,0,.7);
 }

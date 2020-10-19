@@ -1,16 +1,12 @@
-.jumbotron {
-    background-color: crimson;
-    color: white;
-    height: 250px;
-    text-align: center;
-}
-
 .text-container {
     margin-bottom: 20px;
 }
 
-.card {
+.card-home {
     height: 275px;
+    margin: 10px;
+    width: 350px;
+    padding: 10px;
 }
 
 .btn-rounded {
@@ -22,11 +18,23 @@
 }
 
 .light-card {
-    border: 3px black solid;
-    background-color: lightgray;
+    border: 3px rgba(0,0,0,.7) solid!important;
+    background-color: rgba(0,0,0,.1)!important;
+  
 }
 
 .dark-card {
-    background-color: darkgray;
-    color: white;
+    background-color:  rgba(0,0,0,.7)!important;
+    color: white!important;
+
+}
+
+.btn-blue {
+    background-color: #321195!important;
+    border-color:  #321195!important;
+}
+
+.btn-red {
+    background-color: #6E0759!important;
+    border-color: #6E0759!important;
 }
