@@ -1,11 +1,7 @@
-.jumbotron {
-    background: rgba(196, 196, 196, 0.5);
-    height: 249px;
-    }
 
 .container {
-height: 500px;
-border: solid 1px grey;
+    height: 500px;
+    border: solid 1px grey;
 }
 
 .input-form {
@@ -16,4 +12,10 @@ border: solid 1px grey;
 .form-group {
     padding: 10px;
     width:90%;
+}
+
+.sidebar {
+    border: 1px grey;
+    width: 200px;
+    height: auto;
 }
