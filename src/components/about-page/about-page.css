@@ -1,11 +1,11 @@
 .jumbotron {
-background: rgba(196, 196, 196, 0.5);
-height: 249px;
+  background: rgba(196, 196, 196, 0.5);
+  height: 249px;
 }
 
 .card {
-    background-color: teal;
-width: 358px;
+  background-color: teal;
+  width: 358px;
 }
 
 /* .about-card-body {
@@ -14,11 +14,11 @@ width: 358px;
     height: 225px;
         } */
 
-    .card-img {
-width: 358px;
-height: 225px;
-    }
+.card-img {
+  width: 358px;
+  height: 225px;
+}
 
 .card-deck {
-width: 780px;    
+  width: 780px;
 }
