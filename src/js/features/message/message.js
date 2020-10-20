@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { messageReducer } from "./messageSlice";
-import { currentUserInfo } from "../userInfo/userInfoSlice";
+import { currentUserInfo , currentChannelInfo} from "../userInfo/userInfoSlice";
 import { useSelector } from 'react-redux';
 
 export default function SendMessage()  {
   const dispatch = useDispatch();
   const [message, setMessage] = useState("");
-  const userName = useSelector(currentUserInfo); 
+  const username = useSelector(currentUserInfo); 
+  const channel = useSelector(currentChannelInfo); 
   return (
     <div>
       <div >
@@ -18,7 +19,7 @@ export default function SendMessage()  {
           onChange={(e) => setMessage(e.target.value)}
         />
         <button
-         onClick={() => dispatch(messageReducer(`${userName}: ${message}`))}
+         onClick={() => dispatch(messageReducer(`${username}: ${message}, posting to ${channel}`))}
          >
           Submit
         </button>
