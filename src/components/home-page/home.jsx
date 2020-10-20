@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { Jumbotron, Card, Button } from 'react-bootstrap';
 import '../../index.css';
 import './home-page.css';
-
+import SendInfo from "../../js/features/userInfo/userInfo";
 export default class HomePage extends React.Component {
     render() {
         return (
@@ -33,7 +33,7 @@ export default class HomePage extends React.Component {
                                     <p>Jump into the current conversation and add your perspective.</p>
                                 </Card.Text>
                             </Card.Body>
-                            <Button className="btn-rounded align-self-center btn-red">Enter</Button>
+                            <Button className="btn-rounded align-self-center btn-red" >Enter</Button>
                         </Card>
                         <Card className="text-center card-home dark-card">
                             <Card.Body>
