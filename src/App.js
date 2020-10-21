@@ -12,7 +12,8 @@ import './App.css';
 
 function App() {
   return (
-    <React.Fragment>
+
+    <React.Fragment action="/'" method="post">
       <Navbar />
         <main>
           <Switch>

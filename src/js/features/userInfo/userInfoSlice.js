@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userInfoSlice = createSlice({
   name: "userInfo",
   initialState: {
-    value: "pete",
-    channel: "room",
+    value: "",
+    channel: "",
   },
   reducers: {
     userInfoReducer: (state, action) => {
@@ -16,9 +16,7 @@ export const userInfoSlice = createSlice({
   },
 });
 
-export const { userInfoReducer , setChannelReducer } = userInfoSlice.actions;
-export const currentUserInfo = state => state.userInfo.value;
-export const currentChannelInfo = state => state.userInfo.channel;
+export const { userInfoReducer, setChannelReducer } = userInfoSlice.actions;
+export const currentUserInfo = (state) => state.userInfo.value;
+export const currentChannelInfo = (state) => state.userInfo.channel;
 export default userInfoSlice.reducer;
-
-
