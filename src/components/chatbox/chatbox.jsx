@@ -32,8 +32,10 @@ export function ChatBox() {
       <Container fluid>
         <Row>
           <Col md="2">
+          <div className="">
             <SendInfo />
             <Channels />
+          </div>
           </Col>
           <Col>
             <Row>
@@ -43,12 +45,12 @@ export function ChatBox() {
               <ExpressTest />
               <ChatDisplay/>
             </Container>
-            <Container className="input-form text-center">
+            <Container className="input-form-box text-center">
               <SendMessage />
             </Container>
           </Col>
           <Col md="2">
-            <div className="sidebar current-users-sidebar">
+            <div className="current-users-sidebar">
               <h5>Current users</h5>
               <hr />
               <ul className="list-unstyled">

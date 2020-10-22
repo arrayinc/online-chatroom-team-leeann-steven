@@ -4,9 +4,16 @@
     width: 100%;
 }
 
+.input-form-box {
+    height: 70px;
+    border: solid 1px grey; 
+    width: 100%; 
+    background-color: rgba(0,0,0,.05);
+}
 .input-form {
-    height: 64px;
-    border: solid 1px grey;  
+    height: 50px;
+    width: 80%;
+    margin: 10px;
 }
 
 .form-group {
@@ -21,10 +28,39 @@
     padding: 15px;
 }
 
+.current-users-sidebar {
+    width: auto;
+    height: 600px;
+    background-color: gainsboro;
+    padding: 15px;
+}
+
+.channels-sidebar {
+    width: auto;
+    height: 480px;
+    background-color: gainsboro;
+    padding: 15px;
+}
 .user-dashboard {
     padding: 1em;
     border: 3px solid purple;
     width: 100%;
     margin: 0 auto 1em auto;
     display: block;
+}
+
+.user-info-button-container {
+    padding: 5px;
+    margin: 5px;
+    height: auto;
+    width: 90%;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.modal {
+    height: 200px;
+    position: relative;
 }
