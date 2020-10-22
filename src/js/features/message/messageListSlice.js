@@ -1,18 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { currentMessage } from "./messageSlice";
+import { useSelector } from "react-redux";
+// const chatMessage = [useSelector(currentMessage)];
+const oldMessages = [];
+const initialState = {allMessages: [], allUsers: [] }
 
-export const messageListSlice = createSlice({
-    name: "??",
+const messageListSlice = createSlice({
+    name: "messagelist",
     initialState: {
       allMessages: [],
-      allUsers: [],
+      content: "",
+      // timestamp: new Date(),
+      userId: '192928101',
+      chatroomId: '8w8292910'
     },
+
     reducers: {
-      messageReducer: (state, action) => {
-        state.value = action.payload;
+      messageListReducer: (state, action) => {
+        state.content = action.payload;
+        state.allMessages = state.allMessages.concat(action.payload);
+       
       },
-      messageIdReducer: (state, action) => {
-        state.id = action.payload;
-      },
-    },
+    }
+    
   });
-  
+
+  export const { messageListReducer } = messageListSlice.actions;
+export const messageList = (state) => state.messageList.allMessages;
+export default messageListSlice.reducer;

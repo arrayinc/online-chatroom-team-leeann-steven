@@ -28,7 +28,7 @@ export default function SendInfo() {
             Submit
           </Button>
         </center>
-
+         
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title> Please complete the fields below</Modal.Title>

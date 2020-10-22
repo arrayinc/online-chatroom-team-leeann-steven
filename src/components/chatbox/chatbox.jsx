@@ -17,7 +17,7 @@ import Dashboard from "../Dashboard/dashboard";
 import Channels from "../Channels/channels";
 
 //testing express
-import ExpressTest from "../Expresstest"
+// import ExpressTest from "../Expresstest"
 export function ChatBox() {
   //const username = "LeeAnn"
   // const chatMessage = useSelector(currentMessage);
@@ -40,7 +40,6 @@ export function ChatBox() {
               <Dashboard />
             </Row>
             <Container className="chat-container">
-              <ExpressTest />
               <ChatDisplay/>
             </Container>
             <Container className="input-form text-center">

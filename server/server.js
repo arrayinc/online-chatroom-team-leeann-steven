@@ -21,11 +21,11 @@ app.get('/', (req, res) => {
 
 });
 
-app.get('/expresstest', (req,res) => {
-    var message = "express and react are talking to each other";
-    res.json(message);
-    console.log('Sent message');
-});
+// app.get('/expresstest', (req,res) => {
+//     var message = "express and react are talking to each other";
+//     res.json(message);
+//     console.log('Sent message');
+// });
 app.listen(PORT, () => {
     console.log(`Server is listening... ${PORT}`);
 });
