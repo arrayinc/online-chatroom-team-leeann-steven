@@ -14,13 +14,15 @@ const messagelist =  chatMessage.map((chatMessage) => (
   </div>
  ));
   
+  const newMessageArr = messageArr.concat(chatMessage);
 
    return (
     
      <div>
-      
+
        {console.log(chatMessage)}
      {messagelist}
    </div>   
    );
+
 }

@@ -5,6 +5,7 @@ import { messageListReducer } from "./messageListSlice";
 import { currentUserInfo, currentChannelInfo } from "../userInfo/userInfoSlice";
 import { useSelector } from "react-redux";
 import ChatDisplay from "../../../components/chatbox/chatdisplay";
+import { Button } from 'react-bootstrap';
 
 export default function SendMessage() {
   const dispatch = useDispatch();
@@ -22,13 +23,15 @@ export default function SendMessage() {
           aria-label="Submit Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          className="input-form"
         />
-        <button
-          //  onClick={ChatDisplay}
-          onClick={submitMessage}
+        <Button 
+        onClick={submitMessage}
+        // onClick={ChatDisplay}
         >
-          Submit
-        </button>
+          Send
+        </Button>
+        
       </div>
     </div>
   );
