@@ -7,16 +7,16 @@ import '../../index.css';
 
 export default function Channels() {
     return (
-        <Container>
-            <div className="sidebar channels-sidebar">
+        //<Container>
+            <div className="channels-sidebar">
                 <h5>Channels </h5>
                 <hr />
                 <ul className="list-unstyled">
-                    <li>#public</li>
+                    <li>#general</li>
                     <li>#issues</li>
                     <li>#candidates</li>
                 </ul>
             </div>
-        </Container>
+        //</Container>
     )
 }

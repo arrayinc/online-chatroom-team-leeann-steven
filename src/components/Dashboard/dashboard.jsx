@@ -3,32 +3,29 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import { currentUserInfo, currentChannelInfo } from "../../js/features/userInfo/userInfoSlice";
+import { currentUserInfo, currentChannelInfo, currentAvatarInfo } from "../../js/features/userInfo/userInfoSlice";
 import { useSelector } from 'react-redux';
-//import { useDispatch } from "react-redux";
-//import { setUsername, setAvatar, setChannel } from './dashboardSlice';
 
 export default function Dashboard() {
 
-    //const dispatch = useDispatch();
     const username = useSelector(currentUserInfo);
+    const avatar = useSelector(currentAvatarInfo);
     const channel = useSelector(currentChannelInfo);
-    //const [currentDashboard, setCurrentDashboard] = useState("");
     
     return (
         <Container>
             <div className="user-dashboard">
                 <Row>
-                    <Col xs="4">
-                        <h5 className="mr-auto">Current chatroom: {channel}</h5>
-                    </Col>
-                    <Col xs="4">
-                    </Col>
-                    <Col xs="3">
-                        <h5>Username: {username} </h5>
+                    <Col xs="5">
+                        <h5 className="mr-auto">Current channel: #{channel}</h5>
                     </Col>
                     <Col xs="1">
-                        
+                    </Col>
+                    <Col xs="4">
+                        <h5>Username: @{username} </h5>
+                    </Col>
+                    <Col xs="2">
+                        <img src={avatar} alt="avatar" />
                     </Col>
                 </Row>
             </div>

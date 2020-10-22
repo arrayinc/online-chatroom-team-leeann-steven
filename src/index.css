@@ -14,7 +14,7 @@ code {
 }
 
 .jumbotron {
-  height: 250px;
+  height: 200px;
   color: white;
   text-align: center;
   background: linear-gradient(90deg, rgba(213,1,1,1) 0%, rgba(73,9,121,1) 50%, rgba(0,35,209,1) 100%)!important;
