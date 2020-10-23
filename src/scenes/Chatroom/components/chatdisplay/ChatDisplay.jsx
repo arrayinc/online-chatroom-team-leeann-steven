@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ListGroup from "react-bootstrap/ListGroup";
-import { messageList } from "./messageListSlice.js";
+import { messageList } from "../messages/messageListSlice";
 
 import "../../chatroom.css";
 
