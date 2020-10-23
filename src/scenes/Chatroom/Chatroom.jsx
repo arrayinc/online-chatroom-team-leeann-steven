@@ -3,13 +3,10 @@ import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-//import ListGroup from "react-bootstrap/ListGroup";
-//import { useSelector } from "react-redux";
-//import { currentMessage } from "../../js/features/message/messageSlice";
-//import { currentUserInfo } from "../../js/features/userInfo/userInfoSlice";
-import SendMessage from "../../js/features/message/message";
-import SendInfo from "../../js/features/userInfo/userInfo";
-import ChatDisplay from "./chatdisplay";
+
+import SendMessage from "./components/messages/Message.jsx";
+import SendInfo from "../../components/modal/userInfo.js";
+import ChatDisplay from "./components/chatdisplay/ChatDisplay.jsx";
 import Dashboard from "./components/dashboard/Dashboard";
 import Channels from "./components/channels/Channels";
 

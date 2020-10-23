@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "react-bootstrap";
-import { messageListReducer } from "./messageListSlice";
-import { currentUserInfo } from "../userInfo/userInfoSlice";
-//import { currentChannelInfo } from "../userInfo/userInfoSlice";
-//import { messageReducer} from "./messageSlice";
-//import ChatDisplay from "../../../scenes/Chatroom/chatdisplay";
+import { messageListReducer } from "../chatdisplay/messageListSlice";
+import { currentUserInfo } from "../../../../components/modal/userInfoSlice";
 
 export default function SendMessage() {
   const dispatch = useDispatch();
@@ -18,7 +15,7 @@ export default function SendMessage() {
       messageListReducer(
         <div>
           {" "}
-          <img src="https://picsum.photos/50/50" /> {username}: {message}
+          <img src="https://picsum.photos/50/50" alt="avatar" /> {username}: {message}
         </div>
       )
     );

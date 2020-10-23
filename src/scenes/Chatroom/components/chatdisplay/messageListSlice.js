@@ -1,10 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-//import { useSelector } from "react-redux";
-//import { currentMessage } from "./messageSlice";
-// const chatMessage = [useSelector(currentMessage)];
 
-const oldMessages = [];
-const initialState = { allMessages: [], allUsers: [] };
+//const oldMessages = [];
+//const initialState = { allMessages: [], allUsers: [] };
 
 const messageListSlice = createSlice({
   name: "messagelist",
