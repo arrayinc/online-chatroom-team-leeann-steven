@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
-import { messageListReducer } from "../chatdisplay/messageListSlice";
+import { messageListReducer } from "./messageListSlice";
 import { currentUserInfo, currentChannelInfo, currentAvatarInfo, currentColorInfo } from "../../../../components/modal/userInfoSlice";
 
 export default function SendMessage() {
