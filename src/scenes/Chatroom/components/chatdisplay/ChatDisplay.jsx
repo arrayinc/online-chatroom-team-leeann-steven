@@ -1,26 +1,29 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import ListGroup from "react-bootstrap/ListGroup";
 import { messageList } from "./messageListSlice.js";
 
 import "../../chatroom.css";
 
-//const messageArr = [];
-
+const messageArr = []
 export default function ChatDisplay() {
   const chatMessage = [useSelector(messageList)];
+ 
+const messagelist =  chatMessage.map((chatMessage) => (
+   <div>
+  <p>{chatMessage}</p>
+  </div>
+ ));
+  
+  const newMessageArr = messageArr.concat(chatMessage);
 
-  const messagelist = chatMessage.map((chatMessage) => (
-    <div>
-      <p>{chatMessage}</p>
-    </div>
-  ));
+   return (
+    
+     <div>
 
-  //const newMessageArr = messageArr.concat(chatMessage);
+       {console.log(chatMessage)}
+     {messagelist}
+   </div>   
+   );
 
-  return (
-    <div>
-      {console.log(chatMessage)}
-      {messagelist}
-    </div>
-  );
 }
