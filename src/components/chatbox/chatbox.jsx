@@ -11,7 +11,7 @@ import Col from "react-bootstrap/Col";
 import { useSelector } from "react-redux";
 import { currentMessage } from "../../js/features/message/messageSlice";
 //import { currentUserInfo } from "../../js/features/userInfo/userInfoSlice";
-import SendInfo from "../../js/features/userInfo/userInfo";
+import SendInfo from "../../js/features/userInfo/userModal";
 import ChatDisplay from "./chatdisplay";
 import Dashboard from "../Dashboard/dashboard";
 import Channels from "../Channels/channels";
@@ -33,7 +33,7 @@ export function ChatBox() {
         <Row>
           <Col md="2">
           <div className="">
-            <SendInfo />
+            <SendInfo/>
             <Channels />
           </div>
           </Col>
