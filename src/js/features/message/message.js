@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { messageReducer} from "./messageSlice";
 import { messageListReducer } from "./messageListSlice";
-import { currentUserInfo, currentChannelInfo } from "../userInfo/userInfoSlice";
+import { currentUserInfo, currentChannelInfo, currentAvatarInfo } from "../userInfo/userInfoSlice";
 import { useSelector } from "react-redux";
 import ChatDisplay from "../../../components/chatbox/chatdisplay";
 import { Button } from 'react-bootstrap';
@@ -11,11 +11,11 @@ export default function SendMessage() {
   const dispatch = useDispatch();
   const [message, setMessage] = useState("");
   const username = useSelector(currentUserInfo);
-  
+  const avatar = useSelector(currentAvatarInfo);
 
   const submitMessage = () =>
    // dispatch(messageReducer(`${username}: ${message}`));
-    dispatch(messageListReducer(<div> <img src="https://picsum.photos/50/50"/> {username}: {message}</div>));
+    dispatch(messageListReducer(<div> <img src={avatar} />{username}: {message}</div>));
   return (
     <div>
       <div>
