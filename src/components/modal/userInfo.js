@@ -11,7 +11,7 @@ import {
 export default function SendInfo() {
   const dispatch = useDispatch();
   const [currentUserInfo, setCurrentUserInfo] = useState("");
-  //const [currentAvatarInfo, setCurrentAvatarInfo] = useState(""); 
+  //const [currentAvatarInfo, setCurrentAvatarInfo] = useState("");
   const [currentChannelInfo, setCurrentChannelInfo] = useState("");
   const [show, setShow] = useState(false);
   const handleClose = () =>

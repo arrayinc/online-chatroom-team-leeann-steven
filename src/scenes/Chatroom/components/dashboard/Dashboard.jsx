@@ -1,11 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import { currentUserInfo, currentChannelInfo, currentAvatarInfo } from "../../../../js/features/userInfo/userInfoSlice";
-import { useSelector } from 'react-redux';
+import { currentUserInfo, currentChannelInfo, currentAvatarInfo } from "../../../../components/modal/userInfoSlice";
 import './dashboard.css';
-
 
 export default function Dashboard() {
 
