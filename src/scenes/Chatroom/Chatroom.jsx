@@ -1,11 +1,13 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import ListGroup from "react-bootstrap/ListGroup";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+
 import SendMessage from "./components/messages/Message.jsx";
-import SendInfo from "../../components/modal/userInfo.js";
+import SendInfo from "../../components/modal/userModal.js";
 import ChatDisplay from "./components/chatdisplay/ChatDisplay.jsx";
 import Dashboard from "./components/dashboard/Dashboard";
 import Channels from "./components/channels/Channels";
@@ -13,7 +15,7 @@ import Channels from "./components/channels/Channels";
 import "./chatroom.css";
 
 //testing express
-// import ExpressTest from "../Expresstest"
+//import ExpressTest from "../Expresstest"
 export function Chatroom() {
   //const username = "LeeAnn"
   // const chatMessage = useSelector(currentMessage);
@@ -29,7 +31,9 @@ export function Chatroom() {
         <Row>
           <Col md="2">
           <div className="">
-            <SendInfo />
+          <ListGroup>
+            <SendInfo/>
+            </ListGroup>
             <Channels />
           </div>
           </Col>
