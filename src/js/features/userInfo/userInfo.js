@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { userInfoReducer, setChannelReducer, setAvatarReducer } from "./userInfoSlice";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import {
+  userInfoReducer,
+  setChannelReducer,
+  //setAvatarReducer,
+} from "./userInfoSlice";
 
 export default function SendInfo() {
   const dispatch = useDispatch();
   const [currentUserInfo, setCurrentUserInfo] = useState("");
-  const [currentAvatarInfo, setCurrentAvatarInfo] = useState(""); //LG not sure how to add this in message itself
+  //const [currentAvatarInfo, setCurrentAvatarInfo] = useState(""); 
   const [currentChannelInfo, setCurrentChannelInfo] = useState("");
   const [show, setShow] = useState(false);
   const handleClose = () =>
@@ -31,14 +35,9 @@ export default function SendInfo() {
               Enter Your Info
             </Button>
           </div>
-         
         </center>
 
-        <Modal 
-          show={show} 
-          onHide={handleClose} 
-          className="modal" 
-          centered>
+        <Modal show={show} onHide={handleClose} className="modal" centered>
           <Modal.Header closeButton>
             <Modal.Title> Please complete the fields below</Modal.Title>
           </Modal.Header>
@@ -47,7 +46,8 @@ export default function SendInfo() {
             <input
               value={currentUserInfo}
               onChange={(e) => setCurrentUserInfo(e.target.value)}
-              className="form-field" placeholder="@username"//css in chatbox.css
+              className="form-field"
+              placeholder="@username" //css in chatbox.css
             />
             <br></br>
             <br></br>
@@ -56,10 +56,10 @@ export default function SendInfo() {
             <input
               value={currentChannelInfo}
               onChange={(e) => setCurrentChannelInfo(e.target.value)}
-              className="form-field" placeholder="#channel" //css in chatbox.css
+              className="form-field"
+              placeholder="#channel" //css in chatbox.css
             />
             <br></br>
-            
           </Modal.Body>
           <Modal.Footer>
             <Button variant="dark" onClick={handleClose}>

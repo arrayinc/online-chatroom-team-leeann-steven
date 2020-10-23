@@ -1,0 +1,7 @@
+.user-dashboard {
+    padding: 1em;
+    border: 3px solid purple;
+    width: 100%;
+    margin: 0 auto 1em auto;
+    display: block;
+}

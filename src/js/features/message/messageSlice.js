@@ -10,7 +10,6 @@ export const messageSlice = createSlice({
     messageReducer: (state, action) => {
       state.value = action.payload;
     },
-    
   },
 });
 

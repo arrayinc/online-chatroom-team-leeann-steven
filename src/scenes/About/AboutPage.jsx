@@ -2,17 +2,14 @@ import React from 'react';
 import '../../index.css';
 import './about-page.css';
 
-import Steven from '../../images/steven copy.png'
-import LeeAnn from '../../images/leeann.jpg'
+import Steven from './images/steven.png';
+import LeeAnn from './images/leeann.jpg';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
-
-// import Col from 'react-bootstrap/Col';
-// import Button from 'react-bootstrap/Button';
 
 export default class AboutPage extends React.Component {
     render() {      

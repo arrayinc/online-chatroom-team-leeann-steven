@@ -7,7 +7,6 @@ export const userInfoSlice = createSlice({
       name: "",
       avatar: "https://picsum.photos/50/50",
     },
-    //value: "",
     channel: "",
   },
   reducers: {
