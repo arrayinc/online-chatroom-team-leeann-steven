@@ -1,4 +1,4 @@
-function createAction(type, prepareAction?)
+function createAction(type, prepareAction) //removed ? from after prepareAction
 
 import { createAction } from '@reduxjs/toolkit'
 

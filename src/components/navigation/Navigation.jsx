@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 //import { NavLink } from "react-router-dom";
 //import logo from './images/voting-sticker.jpg';
+
 import './navbar.css';
 
 export default class Navigation extends React.Component {

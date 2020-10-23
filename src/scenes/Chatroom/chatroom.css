@@ -35,18 +35,18 @@
     padding: 15px;
 }
 
-.channels-sidebar {
+.sidebar {
     width: auto;
-    height: 480px;
+    height: 600px;
     background-color: gainsboro;
     padding: 15px;
 }
-.user-dashboard {
-    padding: 1em;
-    border: 3px solid purple;
-    width: 100%;
-    margin: 0 auto 1em auto;
-    display: block;
+
+.current-users-sidebar {
+    width: auto;
+    height: 600px;
+    background-color: gainsboro;
+    padding: 15px;
 }
 
 .user-info-button-container {
