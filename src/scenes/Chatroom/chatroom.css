@@ -2,17 +2,18 @@
     height: 500px;
     border: solid 1px grey;
     width: 100%;
+    overflow: scroll;
 }
 
 .input-form-box {
     height: 70px;
     border: solid 1px grey; 
     width: 100%; 
-    background-color: rgba(0,0,0,.05);
+    background-color:  gainsboro;
 }
 .input-form {
     height: 50px;
-    width: 80%;
+    width: 87%;
     margin: 10px;
 }
 
@@ -47,6 +48,7 @@
     height: 600px;
     background-color: gainsboro;
     padding: 15px;
+    text-justify: center;
 }
 
 .user-info-button-container {

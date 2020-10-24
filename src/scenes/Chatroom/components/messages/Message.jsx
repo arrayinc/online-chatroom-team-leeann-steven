@@ -3,7 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import { messageListReducer } from "./messageListSlice";
-import { currentUserInfo, currentChannelInfo, currentAvatarInfo, currentColorInfo } from "../../../../components/modal/userInfoSlice";
+import {
+  currentUserInfo,
+  currentChannelInfo,
+  currentAvatarInfo,
+  currentColorInfo,
+} from "../../../../components/modal/userInfoSlice";
+
+import "./message.css";
 
 export default function SendMessage() {
   const dispatch = useDispatch();
@@ -14,10 +21,27 @@ export default function SendMessage() {
 
   const submitMessage = () =>
     // dispatch(messageReducer(`${username}: ${message}`));
-      dispatch(messageListReducer( 
-      <ListGroup.Item style={{backgroundColor: color, margin: "10px", borderRadius: "5px" }} > <img src={avatar} /> {username}: {message}</ListGroup.Item>));
-  
-      return (
+    // inline styles below for chat-bubble -> can't seem to have both class and inline styles on one element
+    dispatch(
+      messageListReducer(
+        <ListGroup.Item
+          //className="chat-bubble"
+          style={{
+            backgroundColor: color,
+            margin: "10px",
+            borderRadius: "20px",
+            //display: "inline-block", was working, now is not!
+            width: "auto", 
+          }}
+        >
+          {" "}
+          <img src={avatar} className="chat-bubble-avatar" /> <b>@{username}</b>
+          : {message}
+        </ListGroup.Item>
+      )
+    );
+
+  return (
     <div>
       <div>
         <input

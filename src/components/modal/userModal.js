@@ -38,13 +38,13 @@ export default function SendInfo() {
         
         <center>
           <div className="user-info-button-container">
-            <h4>Get started here:</h4>
+            {/* <h4>Get started here:</h4> */}
             <Button
               className="contact-submit"
               variant="dark"
               onClick={handleShow}
             >
-              Enter Your Info
+              Edit
             </Button>
           </div>
         </center> 
@@ -64,7 +64,7 @@ export default function SendInfo() {
             <br></br>
             <br></br>
 
-            <label>Channel name: </label>
+            <label>Channel: </label>
             <input
               value={currentChannelInfo}
               onChange={(e) => setCurrentChannelInfo(e.target.value)}
@@ -84,7 +84,7 @@ export default function SendInfo() {
            <br></br>
             <br></br>
 
-            <label>Choose a color for your background: </label>
+            <label>Chat bubble background color: </label>
             <br></br>
           <GithubPicker onChangeComplete={handleChangeComplete}/>
 

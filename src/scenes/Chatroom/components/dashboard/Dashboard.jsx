@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import { currentUserInfo, currentChannelInfo, currentAvatarInfo } from "../../../../components/modal/userInfoSlice";
+import SendInfo from "../../../../components/modal/userModal";
 import './dashboard.css';
 
 export default function Dashboard() {
@@ -16,16 +17,21 @@ export default function Dashboard() {
         <Container>
             <div className="user-dashboard">
                 <Row>
-                    <Col xs="5">
-                        <h5 className="mr-auto">Current channel: #{channel}</h5>
-                    </Col>
-                    <Col xs="1">
-                    </Col>
-                    <Col xs="4">
-                        <h5>Username: @{username} </h5>
+                    <Col xs="3">
+                        <h5 className="mr-auto">Current channel: <br/><b>#{channel}</b></h5>
                     </Col>
                     <Col xs="2">
-                        <img src={avatar} alt="avatar" />
+                        <h5>Username: <br/><b>@{username} </b></h5>
+                    </Col>
+                    <Col xs="1">
+                        <img src={avatar} alt="avatar" className="dashboard-avatar" />
+                    </Col>
+                    <Col xs="4">
+                    </Col>
+                    <Col xs="2">
+                        <div className="button-container">
+                            <SendInfo/>
+                        </div>
                     </Col>
                 </Row>
             </div>
