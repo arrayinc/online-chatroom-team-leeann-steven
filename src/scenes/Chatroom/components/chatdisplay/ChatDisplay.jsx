@@ -5,25 +5,22 @@ import { messageList } from "../messages/messageListSlice";
 
 import "../../chatroom.css";
 
-const messageArr = []
+const messageArr = [];
 export default function ChatDisplay() {
   const chatMessage = [useSelector(messageList)];
- 
-const messagelist =  chatMessage.map((chatMessage) => (
-   <div>
-  <p>{chatMessage}</p>
-  </div>
- ));
-  
+
+  const messagelist = chatMessage.map((chatMessage) => (
+    <div>
+      <p>{chatMessage}</p>
+    </div>
+  ));
+
   const newMessageArr = messageArr.concat(chatMessage);
 
-   return (
-    
-     <div>
-
-       {console.log(chatMessage)}
-     {messagelist}
-   </div>   
-   );
-
+  return (
+    <div>
+      {console.log(chatMessage)}
+      {messagelist}
+    </div>
+  );
 }

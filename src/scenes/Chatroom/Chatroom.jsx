@@ -32,7 +32,7 @@ export function Chatroom() {
           <Col md="2">
           <div className="">
           <ListGroup>
-            <SendInfo/>
+            {/* <SendInfo/> */}
             </ListGroup>
             <Channels />
           </div>
@@ -50,7 +50,7 @@ export function Chatroom() {
           </Col>
           <Col md="2">
             <div className="current-users-sidebar">
-              <h5>Current users</h5>
+              <h4 className="text-center">Current users</h4>
               <hr />
               <ul className="list-unstyled">
                 <li>no friends online :(</li>

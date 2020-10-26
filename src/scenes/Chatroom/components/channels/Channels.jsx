@@ -4,7 +4,7 @@ import './channels.css';
 export default function Channels() {
     return (
         <div className="channels-sidebar">
-            <h5>Channels </h5>
+            <h4 className="text-center">Channels </h4>
             <hr />
             <ul className="list-unstyled">
                 <li>#general</li>
