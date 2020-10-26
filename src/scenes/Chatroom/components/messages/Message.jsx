@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import { messageListReducer } from "./messageListSlice";
 import {
@@ -9,6 +9,7 @@ import {
   currentAvatarInfo,
   currentColorInfo,
 } from "../../../../components/modal/userInfoSlice";
+
 
 import "./message.css";
 
