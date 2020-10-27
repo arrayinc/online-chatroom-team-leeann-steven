@@ -7,9 +7,14 @@ import {
   setColorReducer,
 } from "./userInfoSlice";
 
-import { Button, Modal, Dropdown , DropdownButton } from "react-bootstrap";
-import { GithubPicker } from 'react-color';
+//SS - added for user and channel lists
+import { channelListReducer } from "../../scenes/Chatroom/components/channels/channelListSlice";
+import { allUsersReducer } from "../../../src/scenes/Chatroom/components/users/userListSlice";
 
+import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
+import { GithubPicker } from "react-color";
+//SS - testing
+//const handleClickUsers = () => console.log({currentUserInfo});
 
 export default function SendInfo() {
   const dispatch = useDispatch();
@@ -21,8 +26,23 @@ export default function SendInfo() {
   const handleClose = () =>
     setShow(false) &
     dispatch(userInfoReducer(currentUserInfo)) &
-    dispatch(setChannelReducer(currentChannelInfo));
-  dispatch(setAvatarReducer(currentAvatarInfo));
+    dispatch(
+      allUsersReducer(
+        <li>
+          <Button>{currentUserInfo}</Button>
+          {/* <Button onClick={handleClickUsers}>{currentUserInfo}</Button> */}
+        </li>
+      )
+    ) &
+    dispatch(setChannelReducer(currentChannelInfo)) &
+  dispatch(
+    channelListReducer(
+      <li>
+        <Button>#{currentChannelInfo}</Button>
+        {/* <Button onClick={console.log("channels")}>#{currentChannelInfo}</Button>  */}
+      </li>
+    )
+  ) & dispatch(setAvatarReducer(currentAvatarInfo)) &
   dispatch(setColorReducer(currentColorInfo));
 
   const handleShow = () => setShow(true);
@@ -31,11 +51,10 @@ export default function SendInfo() {
   const handleClick3 = () => setCurrentAvatarInfo("https://picsum.photos/51");
   const handleClick4 = () => setCurrentAvatarInfo("https://picsum.photos/52");
   const handleClick5 = () => setCurrentAvatarInfo("https://picsum.photos/48");
-  const handleChangeComplete = (color) => setCurrentColorInfo(color.hex)
+  const handleChangeComplete = (color) => setCurrentColorInfo(color.hex);
   return (
     <div>
-       <div>
-        
+      <div>
         <center>
           <div className="user-info-button-container">
             {/* <h4>Get started here:</h4> */}
@@ -47,7 +66,7 @@ export default function SendInfo() {
               Edit
             </Button>
           </div>
-        </center> 
+        </center>
 
         <Modal show={show} onHide={handleClose} className="modal" centered>
           <Modal.Header closeButton>
@@ -73,33 +92,42 @@ export default function SendInfo() {
             />
             <br></br>
             <br></br>
-                     
+
             <DropdownButton id="dropdown-basic-button" title="Choose an Avatar">
-              <Dropdown.Item onClick= {handleClick1} placeholder="#avatar"><img src="https://picsum.photos/50"/></Dropdown.Item>
-              <Dropdown.Item onClick= {handleClick2} placeholder="#avatar"><img src="https://picsum.photos/49"/></Dropdown.Item>
-              <Dropdown.Item onClick= {handleClick3} placeholder="#avatar"><img src="https://picsum.photos/51"/></Dropdown.Item>
-              <Dropdown.Item onClick= {handleClick4} placeholder="#avatar"><img src="https://picsum.photos/52"/></Dropdown.Item>
-              <Dropdown.Item onClick= {handleClick5} placeholder="#avatar"><img src="https://picsum.photos/48"/></Dropdown.Item>
-           </DropdownButton>
-           <br></br>
+              <Dropdown.Item onClick={handleClick1} placeholder="#avatar">
+                <img src="https://picsum.photos/50" />
+              </Dropdown.Item>
+              <Dropdown.Item onClick={handleClick2} placeholder="#avatar">
+                <img src="https://picsum.photos/49" />
+              </Dropdown.Item>
+              <Dropdown.Item onClick={handleClick3} placeholder="#avatar">
+                <img src="https://picsum.photos/51" />
+              </Dropdown.Item>
+              <Dropdown.Item onClick={handleClick4} placeholder="#avatar">
+                <img src="https://picsum.photos/52" />
+              </Dropdown.Item>
+              <Dropdown.Item onClick={handleClick5} placeholder="#avatar">
+                <img src="https://picsum.photos/48" />
+              </Dropdown.Item>
+            </DropdownButton>
+            <br></br>
             <br></br>
 
             <label>Chat bubble background color: </label>
             <br></br>
-          <GithubPicker onChangeComplete={handleChangeComplete}/>
-
+            <GithubPicker onChangeComplete={handleChangeComplete} />
           </Modal.Body>
           <Modal.Footer>
             <Button variant="dark" onClick={handleClose}>
               Submit
             </Button>
-            {console.log(currentUserInfo)}
+            {/* {console.log(currentUserInfo)}
             {console.log(currentChannelInfo)}
             {console.log(currentAvatarInfo)}
-            {console.log(currentColorInfo)}
+            {console.log(currentColorInfo)} */}
           </Modal.Footer>
         </Modal>
       </div>
-     </div>
+    </div>
   );
 }

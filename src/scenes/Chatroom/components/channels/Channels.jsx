@@ -1,16 +1,21 @@
-import React from 'react'
-import './channels.css';
+import React from "react";
+import { useSelector } from "react-redux";
+import { allChannelList } from "./channelListSlice";
+import Button from "react-bootstrap/Button";
 
 export default function Channels() {
-    return (
-        <div className="channels-sidebar">
-            <h4 className="text-center">Channels </h4>
-            <hr />
-            <ul className="list-unstyled">
-                <li>#general</li>
-                <li>#issues</li>
-                <li>#candidates</li>
-            </ul>
-        </div>
-    )
+  const channel = useSelector(allChannelList);
+
+  return (
+    <div className="channels-sidebar">
+      <h5>Channels </h5>
+      <hr />
+      <ul className="list-unstyled">
+        <li><Button>#general</Button></li>
+        <li><Button>#issues</Button></li>
+        <li><Button>#candidates</Button></li>
+        {channel}
+      </ul>
+    </div>
+  );
 }

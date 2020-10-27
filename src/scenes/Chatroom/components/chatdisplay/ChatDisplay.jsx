@@ -19,8 +19,7 @@ export default function ChatDisplay() {
 
   return (
     <div>
-      {console.log(chatMessage)}
-      {messagelist}
+           {messagelist}
     </div>
   );
 }

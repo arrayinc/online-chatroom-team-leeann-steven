@@ -5,11 +5,11 @@ import messageListReducer from "../scenes/Chatroom/components/messages/messageLi
 import userInfoReducer from "../components/modal/userInfoSlice";
 import setChannelReducer from "../components/modal/userInfoSlice";
 import setColorReducer from "../components/modal/userInfoSlice";
+import channelListReducer from "../scenes/Chatroom/components/channels/channelListSlice";
+import  allUsersReducer  from '../scenes/Chatroom/components/users/userListSlice';
 
 export default configureStore({
     reducer: {
-      message: messageReducer,
-    
       userInfo: userInfoReducer, 
 
       setChannel: setChannelReducer, 
@@ -17,5 +17,9 @@ export default configureStore({
       messageList: messageListReducer,
 
       color: setColorReducer,
+
+      channelList: channelListReducer,
+
+      allUsers: allUsersReducer,
     },                       
   });

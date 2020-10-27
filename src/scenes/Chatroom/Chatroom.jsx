@@ -11,8 +11,12 @@ import SendInfo from "../../components/modal/userModal.js";
 import ChatDisplay from "./components/chatdisplay/ChatDisplay.jsx";
 import Dashboard from "./components/dashboard/Dashboard";
 import Channels from "./components/channels/Channels";
+//import Users from "./components/users/Users";
+import UserList from "./components/users/UserList";
 
 import "./chatroom.css";
+import { allUsersList } from "./components/users/userListSlice.js";
+import UserListDisplay from "./components/users/UserList";
 
 //testing express
 //import ExpressTest from "../Expresstest"
@@ -49,12 +53,10 @@ export function Chatroom() {
             </Container>
           </Col>
           <Col md="2">
-            <div className="current-users-sidebar">
-              <h4 className="text-center">Current users</h4>
-              <hr />
-              <ul className="list-unstyled">
-                <li>no friends online :(</li>
-              </ul>
+          <div className="current-users-sidebar">
+              <h5>Current users</h5>
+              <UserList/>
+              <ul className="list-unstyled"></ul>
             </div>
           </Col>
         </Row>

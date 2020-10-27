@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended: true})); //Matt used bodyParser here inste
 app.use(cors()); //LG added
 
 app.post('/', (req, res) => {   
-console.log("recieving")
+console.log("receiving")
     res.end();
 });
 
