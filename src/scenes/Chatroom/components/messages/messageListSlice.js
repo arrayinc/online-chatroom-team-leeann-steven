@@ -8,15 +8,18 @@ const messageListSlice = createSlice({
   initialState: {
     allMessages: [],
     content: "",
+   
     // timestamp: new Date(),
-    userId: "192928101",
-    chatroomId: "8w8292910",
+    // userId: "192928101",
+    // chatroomId: "8w8292910",
   },
 
   reducers: {
     messageListReducer: (state, action) => {
-      state.content = action.payload;
-      state.allMessages = state.allMessages.concat(action.payload);
+      const { username, message, avatar, color } = action.payload;
+      state.allMessages.push({ username, message, avatar, color});
+      // state.content = action.payload;
+      // state.allMessages = state.allMessages.concat(action.payload);
     },
   },
 });

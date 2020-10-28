@@ -23,18 +23,19 @@ app.use(cors()); //LG added
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 });
-// io.on('connection', function(socket){
-//   socket.on('chat message', function(msg){
-//     io.emit('chat message', msg) & console.log("message sent");
-//   });
-// });
 
-io.on("connection", (socket) => {
-  console.log("beep");
-  socket.on("disconnect", () => {
-    console.log("boop");
+io.on('connection', function(socket){
+  socket.on('chat message', function(msg){
+    io.emit('chat message', msg);
   });
 });
+
+// io.on("connection", (socket) => {
+//   console.log("beep");
+//   socket.on("disconnect", () => {
+//     console.log("boop");
+//   });
+// });
 
 http.listen(port, function () {
   console.log("listening on *:" + port);
