@@ -1,25 +1,36 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ListGroup from "react-bootstrap/ListGroup";
+import { messageListReducer } from "../messages/messageListSlice";
 import { messageList } from "../messages/messageListSlice";
-
+import io from "socket.io-client";
 import "../../chatroom.css";
+const socket = io();
 
-const messageArr = [];
 export default function ChatDisplay() {
-  const chatMessage = [useSelector(messageList)];
+  const dispatch = useDispatch();
+  const chatMessage = useSelector(messageList);
 
-  const messagelist = chatMessage.map((chatMessage) => (
-    <div>
-      <p>{chatMessage}</p>
-    </div>
-  ));
+  socket.once("chat message", (msg) => {
+    dispatch(messageListReducer(msg));
+  });
 
-  const newMessageArr = messageArr.concat(chatMessage);
+  const messagelist = chatMessage.map((chat) => {
+    return (
+      <ListGroup.Item
+        style={{
+          backgroundColor: chat.color,
+          margin: "10px",
+          borderRadius: "20px",
+          width: "auto",
+        }}
+      >
+        {" "}
+        <img src={chat.avatar} className="chat-bubble-avatar" />{" "}
+        <b>@{chat.username}</b>: {chat.message}
+      </ListGroup.Item>
+    );
+  });
 
-  return (
-    <div>
-           {messagelist}
-    </div>
-  );
+  return <div>{messagelist}</div>;
 }
