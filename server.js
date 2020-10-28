@@ -41,7 +41,7 @@ io.on('connection', function(socket){
 //   });
 // });
 
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'build', '/public/index.html'))); //added
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'build', 'index.html'))); //added
 
 http.listen(port, function () {
   console.log("listening on *:" + port);
