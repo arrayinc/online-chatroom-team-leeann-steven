@@ -4,6 +4,7 @@ const app = express();
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
 const port = process.env.PORT || 3001;
+const favicon = require("serve-favicon");
 //const router = express.Router();
 const path = require("path");
 const bodyParser = require("body-parser");
