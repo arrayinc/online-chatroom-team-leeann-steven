@@ -4,8 +4,6 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import ListGroup from "react-bootstrap/ListGroup";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
-
 import SendMessage from "./components/messages/Message.jsx";
 import SendInfo from "../../components/modal/userModal.js";
 import ChatDisplay from "./components/chatdisplay/ChatDisplay.jsx";

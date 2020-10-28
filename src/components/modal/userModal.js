@@ -8,7 +8,7 @@ import {
 } from "./userInfoSlice";
 
 //SS - added for user and channel lists
-import { channelListReducer } from "../../scenes/Chatroom/components/channels/channelListSlice";
+//LG import { channelListReducer } from "../../scenes/Chatroom/components/channels/channelListSlice";
 import { allUsersReducer } from "../../../src/scenes/Chatroom/components/users/userListSlice";
 
 import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
@@ -19,8 +19,8 @@ import { GithubPicker } from "react-color";
 export default function SendInfo() {
   const dispatch = useDispatch();
   const [currentUserInfo, setCurrentUserInfo] = useState("");
-  const [currentAvatarInfo, setCurrentAvatarInfo] = useState(""); //LG not sure how to add this in message itself
-  const [currentChannelInfo, setCurrentChannelInfo] = useState("");
+  const [currentAvatarInfo, setCurrentAvatarInfo] = useState(""); 
+  //LG const [currentChannelInfo, setCurrentChannelInfo] = useState("");
   const [currentColorInfo, setCurrentColorInfo] = useState("");
   const [show, setShow] = useState(true);
   const handleClose = () =>
@@ -34,15 +34,16 @@ export default function SendInfo() {
         </li>
       )
     ) &
-    dispatch(setChannelReducer(currentChannelInfo)) &
-  dispatch(
-    channelListReducer(
-      <li>
-        <Button>#{currentChannelInfo}</Button>
-        {/* <Button onClick={console.log("channels")}>#{currentChannelInfo}</Button>  */}
-      </li>
-    )
-  ) & dispatch(setAvatarReducer(currentAvatarInfo)) &
+  //LG   dispatch(setChannelReducer(currentChannelInfo)) &
+  // dispatch(
+  //   channelListReducer(
+  //     <li>
+  //       <Button>#{currentChannelInfo}</Button>
+  //       {/* <Button onClick={console.log("channels")}>#{currentChannelInfo}</Button>  */}
+  //     </li>
+  //   )
+  // ) & 
+  dispatch(setAvatarReducer(currentAvatarInfo)) &
   dispatch(setColorReducer(currentColorInfo));
 
   const handleShow = () => setShow(true);
@@ -83,13 +84,13 @@ export default function SendInfo() {
             <br></br>
             <br></br>
 
-            <label>Channel: </label>
+            {/*LG <label>Channel: </label>
             <input
               value={currentChannelInfo}
               onChange={(e) => setCurrentChannelInfo(e.target.value)}
               className="form-field"
               placeholder="#channel" //css in chatbox.css
-            />
+            /> */}
             <br></br>
             <br></br>
 
