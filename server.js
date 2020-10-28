@@ -24,7 +24,7 @@ app.use(session({ secret: "Truly a secret" }));
 app.use(cors()); //LG added
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname + 'index.html');
 });
 
 io.on('connection', function(socket){
