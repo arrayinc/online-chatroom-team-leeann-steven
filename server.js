@@ -1,9 +1,9 @@
-var app = require("express")();
+//var app = require("express")();
 const express = require("express")();
-// const app = express();
-var http = require("http").Server(app);
-var io = require("socket.io")(http);
-var port = process.env.PORT || 3001;
+const app = express();
+const http = require("http").Server(app);
+const io = require("socket.io")(http);
+const port = process.env.PORT || 3001;
 
 //const router = express.Router();
 const path = require("path");
@@ -16,7 +16,7 @@ const { isObject } = require("util");
 
 app.use(express.static(path.join(__dirname, 'build'))); //added
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico'))); //added
 app.use(cookieParser());
 app.use(bodyParser.json()); //LG added
 app.use(session({ secret: "Truly a secret" }));
