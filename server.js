@@ -23,7 +23,7 @@ app.use(session({ secret: "Truly a secret" }));
 app.use(cors()); //LG added
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + 'index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 io.on('connection', function(socket){
@@ -39,7 +39,7 @@ io.on('connection', function(socket){
 //   });
 // });
 
-app.get('*', (req, res) => res.sendFile(path.join(_dirname, 'build', 'index.html'))); //added
+app.get('*', (req, res) => res.sendFile(path.join(_dirname, 'build', '/index.html'))); //added
 
 http.listen(port, function () {
   console.log("listening on *:" + port);
