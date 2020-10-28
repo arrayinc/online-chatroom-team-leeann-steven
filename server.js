@@ -5,7 +5,7 @@ const http = require("http").Server(app);
 const io = require("socket.io")(http);
 const port = process.env.PORT || 3001;
 const favicon = require("serve-favicon");
-//const router = express.Router();
+const router = express.Router();
 const path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -25,6 +25,7 @@ app.use(cors()); //LG added
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 });
+
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
