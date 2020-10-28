@@ -1,15 +1,13 @@
 //var app = require("express")();
-const express = require("express")();
+const express = require("express");
 const app = express();
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
 const port = process.env.PORT || 3001;
-
 //const router = express.Router();
 const path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const { isObject } = require("util");
