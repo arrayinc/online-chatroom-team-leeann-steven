@@ -14,6 +14,8 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const { isObject } = require("util");
 
+app.use(express.static(path.join(__dirname, 'build'))); //added
+
 app.use(cookieParser());
 app.use(bodyParser.json()); //LG added
 app.use(session({ secret: "Truly a secret" }));
@@ -36,6 +38,8 @@ io.on('connection', function(socket){
 //     console.log("boop");
 //   });
 // });
+
+app.get('*', (req, res) => res.sendFile(path.join(_dirname, 'build', 'index.html'))); //added
 
 http.listen(port, function () {
   console.log("listening on *:" + port);
