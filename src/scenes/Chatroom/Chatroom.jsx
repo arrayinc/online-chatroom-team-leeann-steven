@@ -30,8 +30,8 @@ export function Chatroom() {
         <h1>CONVERSATION</h1>
       </Jumbotron>
       <Container fluid className="chatroom-container">
-        <Row noGutters={true}>
-          <Col xs="3" noGutters={true}>
+        <Row>
+          <Col xs="3" >
             <div className="users-sidebar">
               <h4>Joined conversation as:</h4>
               <Dashboard />
@@ -40,13 +40,16 @@ export function Chatroom() {
               <UserList />
             </div>
           </Col>
-          <Col xs="9" noGutters={true}>
+          <Col xs="9" >
             <Row className="chat-container">
               <ChatDisplay />
             </Row>
-            <Row className="input-form-box text-center">
-              <SendMessage />
+            <Row>
+              <div className="input-form-box">
+                <SendMessage />
+              </div>
             </Row>
+            
           </Col>
         </Row>
      

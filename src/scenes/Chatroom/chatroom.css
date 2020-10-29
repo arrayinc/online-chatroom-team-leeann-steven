@@ -10,15 +10,18 @@
 }
 
 .input-form-box {
-    height: 70px;
     border: solid 1px grey; 
     width: 100%; 
     background-color:  gainsboro;
 }
 .input-form {
     height: 50px;
-    width: 87%;
+    width: 100%;
     margin: 10px;
+}
+
+.submit-button {
+    margin-top: 10%;
 }
 
 .form-group {
@@ -30,14 +33,11 @@
     width: auto;
     height: 100%;
     background-color: gainsboro;
-    padding: 15px;
+    padding: 10%;
 }
 
 .user-info-button-container {
-    padding: 5px;
-    margin: 5px;
     height: auto;
-    width: 90%;
 }
 
 .form-field {
@@ -47,4 +47,8 @@
 .modal {
     height: 200px;
     position: relative;
+}
+
+.edit-button {
+    margin-top: 10%;
 }
