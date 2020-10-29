@@ -29,16 +29,36 @@ export function Chatroom() {
         <h2>Welcome to the</h2>
         <h1>CONVERSATION</h1>
       </Jumbotron>
-      <Container fluid>
-        <Row>
-          <Col md="2">
-          <div className="">
+      <Container fluid className="chatroom-container">
+        <Row noGutters={true}>
+          <Col xs="3" noGutters={true}>
+            <div className="users-sidebar">
+              <h4>Joined conversation as:</h4>
+              <Dashboard />
+              <hr></hr>
+              <h4>Current users:</h4>
+              <UserList />
+            </div>
+          </Col>
+          <Col xs="9" noGutters={true}>
+            <Row className="chat-container">
+              <ChatDisplay />
+            </Row>
+            <Row className="input-form-box text-center">
+              <SendMessage />
+            </Row>
+          </Col>
+        </Row>
+     
+        
+            
+          {/* <div className="">
           <ListGroup>
-            {/* <SendInfo/> */}
+           
             </ListGroup>
             <Channels />
           </div>
-          </Col>
+         
           <Col>
             <Row>
               <Dashboard />
@@ -56,8 +76,8 @@ export function Chatroom() {
               <UserList/>
               <ul className="list-unstyled"></ul>
             </div>
-          </Col>
-        </Row>
+          </Col> */}
+       
       </Container>
     </div>
   );
