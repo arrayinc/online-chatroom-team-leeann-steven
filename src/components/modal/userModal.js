@@ -52,7 +52,7 @@ export default function SendInfo() {
   const handleClick3 = () => setCurrentAvatarInfo("https://picsum.photos/51");
   const handleClick4 = () => setCurrentAvatarInfo("https://picsum.photos/52");
   const handleClick5 = () => setCurrentAvatarInfo("https://picsum.photos/48");
-  const handleChangeComplete = (color) => setCurrentColorInfo(color.hex);
+  const handleChangeComplete = (color) => setCurrentColorInfo(color.rgb);
   return (
     <div>
       <div>
