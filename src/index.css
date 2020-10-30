@@ -76,30 +76,30 @@ h5 {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   h1 {
-    font-size: 2.5em;
+    font-size: 2.75em;
  }
  h2 {
-   font-size: 2em;
+   font-size: 2.5em;
  }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
   h1 {
-    font-size: 3em;
+    font-size: 3.5em;
  }
  h2 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   h1 {
-    font-size: 4em;
+    font-size: 4.5em;
  }
  h2 {
-  font-size: 3em;
+  font-size: 3.5em;
 }
 }
 

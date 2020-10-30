@@ -86,8 +86,7 @@ export default function SendInfo() {
   return (
     <div>
       <div>
-       
-          <div className="user-info-button-container">
+          <div className="user-info-button-container d-flex justify-content-end">
             <Button
               className="btn-sm edit-button"
               variant="dark"

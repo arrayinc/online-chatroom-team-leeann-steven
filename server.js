@@ -17,9 +17,9 @@ app.use(express.static(path.join(__dirname, "build"))); //added
 
 app.use(favicon(path.join(__dirname, "public", "favicon.ico"))); //added
 app.use(cookieParser());
-app.use(bodyParser.json()); //LG added
+app.use(bodyParser.json());
 app.use(session({ secret: "Truly a secret" }));
-//app.use(express.bodyParser({extended: true})); //Matt used bodyParser here instead of express
+//app.use(express.bodyParser({extended: true}));
 app.use(cors()); //LG added
 
 io.on("connection", function (socket) {
@@ -34,7 +34,7 @@ app.get("*", (req, res) =>
 
 app.get("*", (req, res) =>
   res.sendFile(path.join(__dirname, "build", "index.html"))
-); //added
+); //this chunk is a duplicate
 
 http.listen(port, function () {
   console.log("listening on *:" + port);
