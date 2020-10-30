@@ -14,25 +14,25 @@ import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 
-const AboutLeeAnn = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-  return (
-    <div>
-      <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Toggle</Button>
-      <Collapse isOpen={isOpen}>
-        <Card>
-          <Card.Body>
-          Anim pariatur cliche reprehenderit,
-           enim eiusmod high life accusamus terry richardson ad squid. Nihil
-           anim keffiyeh helvetica, craft beer labore wes anderson cred
-           nesciunt sapiente ea proident.
-          </Card.Body>
-        </Card>
-      </Collapse>
-    </div>
-  );
-}
+// const AboutLeeAnn = (props) => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const toggle = () => setIsOpen(!isOpen);
+//   return (
+//     <div>
+//       <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Toggle</Button>
+//       <Collapse isOpen={isOpen}>
+//         <Card>
+//           <Card.Body>
+//           Anim pariatur cliche reprehenderit,
+//            enim eiusmod high life accusamus terry richardson ad squid. Nihil
+//            anim keffiyeh helvetica, craft beer labore wes anderson cred
+//            nesciunt sapiente ea proident.
+//           </Card.Body>
+//         </Card>
+//       </Collapse>
+//     </div>
+//   );
+// }
 
 export default class AboutPage extends React.Component {
     render() {      
@@ -52,6 +52,18 @@ export default class AboutPage extends React.Component {
                   <Accordion>
                     <Card className="text-center card-about">
                       <Card.Img variant="top" src= {LeeAnn} />
+                      <Card.Title><h3>LeeAnn heyo</h3></Card.Title>
+                      <Card.Header>
+                        <Accordion.Toggle as={Button} eventKey="0">
+                          This is LeeAnn's accordion toggle!
+                        </Accordion.Toggle>
+                      </Card.Header>
+                      <Accordion.Collapse eventKey="0">
+                        <Card.Body>This is the body</Card.Body>
+                      </Accordion.Collapse>
+                    </Card>
+                      
+                      {/* </Card.Header>
                         <Card.Title><h2>LeeAnn</h2></Card.Title>
                         <Card.Header>
                           <Accordion.Toggle as={Button} eventKey="1">
@@ -63,7 +75,7 @@ export default class AboutPage extends React.Component {
                             LeeAnn is from Casper and loves to get out the vote.
                           </Card.Body>
                         </Accordion.Collapse>
-                    </Card>
+                    </Card> */}
                   </Accordion>
                   <Accordion>
                     <Card className="text-center card-about">
@@ -74,7 +86,7 @@ export default class AboutPage extends React.Component {
                             <p>Click here to meet him</p>
                           </Accordion.Toggle>
                         </Card.Header>
-                        <Accordion.Collapse eventKey="0">
+                        <Accordion.Collapse eventKey="1">
                           <Card.Body >
                             Steven is from Casper and is passionate about building up his community and the people in it.
                           </Card.Body>
