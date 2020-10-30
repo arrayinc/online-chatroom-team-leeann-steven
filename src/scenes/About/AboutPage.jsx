@@ -23,6 +23,7 @@ export default class AboutPage extends React.Component {
         </Jumbotron>
         <Container fluid>
           <center><h3>We're a small team with big aspirations.</h3></center>
+          <br />
           <Row className="d-flex justify-content-center">
             <CardDeck className="d-flex justify-content-center">
               <Accordion>
@@ -33,12 +34,12 @@ export default class AboutPage extends React.Component {
                   </Card.Title>
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                      <h5>Click here to meet her</h5>
+                      <h5><b>Click here to meet her</b></h5>
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                      <p>LeeAnn is a longtime community organizer who loves to help people find their power through voting. Originally from Casper, she is a new transplant to Cheyenne, WY. When not sneakily sliding questions about your voter registration status into conversation, she will happily discuss politics, books, and travel plans with you over coffee at any time of day. </p>
+                      <p><b>LeeAnn is a longtime community organizer </b> who loves to help people find their power through voting. <br />  When not sneakily sliding questions about your voter registration status into conversation, she will happily discuss politics, books, and travel plans with you over coffee at any time of day. <br /> Originally from Casper, she is a new transplant to Cheyenne, WY.</p>
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
@@ -50,13 +51,13 @@ export default class AboutPage extends React.Component {
                     <h2>Steven</h2>
                   </Card.Title>
                   <Card.Header>
-                    <Accordion.Toggle as={Button} eventKey="1">
-                      <p>Click here to meet him</p>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                      <h5><b>Click here to meet him</b></h5>
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
                     <Card.Body>
-                      <p>Steven is a man of many talents and interests who can't pass up a thought-provoking conversation about current events. He is passionate about his community and empowering people through knowledge, as he has worked as an educator, a storyteller, and a problem-solver during the coronavirus pandemic in Wyoming. Steven lives in Casper with his wife and has three children. </p>
+                      <p><b>Steven is a man of many talents </b>and interests who can't pass up a thought-provoking conversation about current events. <br />He is passionate about his community and empowering people through knowledge, as he has worked as an educator, a storyteller, and a problem-solver during the coronavirus pandemic in Wyoming. <br />Steven lives in Casper with his wife and has three children. </p>
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
