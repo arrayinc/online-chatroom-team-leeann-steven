@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Container, Row } from "react-bootstrap";
 
-import { currentUserInfo, currentAvatarInfo, currentChannelInfo, } from "../../../../components/modal/userInfoSlice";
+import { currentUserInfo, currentAvatarInfo } from "../../../../components/modal/userInfoSlice";
 import SendInfo from "../../../../components/modal/userModal";
 
 import "./dashboard.css";
@@ -11,7 +11,6 @@ export default function Dashboard() {
   const username = useSelector(currentUserInfo);
   const avatar = useSelector(currentAvatarInfo);
   
-
   return (
     <Container>
       <Row>

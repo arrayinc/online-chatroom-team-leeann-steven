@@ -22,9 +22,9 @@ export default function ChatDisplay() {
     if (r < textcolorlimit) {
       var textcolor = "white";
     } else if (g < textcolorlimit) {
-      var textcolor = "white";
+      textcolor = "white";
     } else if (b < textcolorlimit) {
-      var textcolor = "white";
+      textcolor = "white";
     }
     return textcolor;
   };
@@ -43,7 +43,7 @@ export default function ChatDisplay() {
         }}
       >
         {" "}
-        <img src={chat.avatar} className="chat-bubble-avatar" />{" "}
+        <img src={chat.avatar} className="chat-bubble-avatar" alt="avatar"/>{" "}
         <b>@{chat.username}</b>: {chat.message}
       </ListGroup.Item>
     );

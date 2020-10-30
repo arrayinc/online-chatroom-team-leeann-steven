@@ -28,8 +28,7 @@ export default function SendMessage() {
       return false;
     }
   };
-  const clear = () => {
-    document.getElementById("chat").reset();}
+
   return (
     <Row>
       <Col sm="10" xs="8" className="input-wrapper">
