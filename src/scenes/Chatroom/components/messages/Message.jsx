@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Row, Col } from "react-bootstrap";
 import {
   currentUserInfo,
   currentChannelInfo,
@@ -32,21 +32,25 @@ export default function SendMessage() {
   };
 
   return (
-    <div>
-      <div>
+    <Row >
+      <Col xs="10">
         <input
           aria-label="Submit Message"
+          placeholder="enter message"
+          className="input-form"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="input-form"
         />
+      </Col>
+      <Col xs="2">
         <Button
           onClick={submitMessage}
+          className="submit-button"
           // onClick={ChatDisplay}
         >
           Send
         </Button>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 }

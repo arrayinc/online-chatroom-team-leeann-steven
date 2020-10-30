@@ -15,26 +15,15 @@ export default function Dashboard() {
     
     return (
         <Container>
-            <div className="user-dashboard">
-                <Row>
-                    <Col xs="3">
-                        <h5 className="mr-auto">Current channel: <br/><b>#{channel}</b></h5>
-                    </Col>
-                    <Col xs="2">
-                        <h5>Username: <br/><b>@{username} </b></h5>
-                    </Col>
-                    <Col xs="1">
-                        <img src={avatar} alt="avatar" className="dashboard-avatar" />
-                    </Col>
-                    <Col xs="4">
-                    </Col>
-                    <Col xs="2">
-                        <div className="button-container">
-                            <SendInfo/>
-                        </div>
-                    </Col>
-                </Row>
-            </div>
+            <Row>
+                <img src={avatar} alt="avatar" className="dashboard-avatar" />
+                <h5>@{username}</h5>
+            </Row>
+            <Row>
+                <div className="button-container">
+                    <SendInfo/>
+                </div>
+            </Row>
         </Container>
     )
 }

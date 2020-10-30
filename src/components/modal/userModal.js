@@ -94,9 +94,8 @@ export default function SendInfo() {
       <div>
        
           <div className="user-info-button-container">
-            {/* <h4>Get started here:</h4> */}
             <Button
-              className="contact-submit"
+              className="btn-sm edit-button"
               variant="dark"
               onClick={handleShow}
             >

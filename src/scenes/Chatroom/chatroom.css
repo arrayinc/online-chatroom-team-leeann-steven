@@ -1,20 +1,27 @@
 .chat-container {
-    height: 500px;
+    height: 530px;
     border: solid 1px grey;
     width: 100%;
     overflow: scroll;
 }
 
+.chatroom-container {
+    
+}
+
 .input-form-box {
-    height: 70px;
     border: solid 1px grey; 
     width: 100%; 
     background-color:  gainsboro;
 }
 .input-form {
     height: 50px;
-    width: 87%;
+    width: 100%;
     margin: 10px;
+}
+
+.submit-button {
+    margin-top: 10%;
 }
 
 .form-group {
@@ -22,40 +29,15 @@
     width: 90%;
 }
 
-.sidebar {
+.users-sidebar {
     width: auto;
-    height: 600px;
+    height: 100%;
     background-color: gainsboro;
-    padding: 15px;
-}
-
-.current-users-sidebar {
-    width: auto;
-    height: 600px;
-    background-color: gainsboro;
-    padding: 15px;
-}
-
-.sidebar {
-    width: auto;
-    height: 600px;
-    background-color: gainsboro;
-    padding: 15px;
-}
-
-.current-users-sidebar {
-    width: auto;
-    height: 600px;
-    background-color: gainsboro;
-    padding: 15px;
-    text-justify: center;
+    padding: 10%;
 }
 
 .user-info-button-container {
-    padding: 5px;
-    margin: 5px;
     height: auto;
-    width: 90%;
 }
 
 .form-field {
@@ -65,4 +47,8 @@
 .modal {
     height: 200px;
     position: relative;
+}
+
+.edit-button {
+    margin-top: 10%;
 }
