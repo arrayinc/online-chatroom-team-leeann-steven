@@ -16,7 +16,7 @@ export default function Dashboard() {
         <Container>
             <Row>
                 <img src={avatar} alt="avatar" className="dashboard-avatar" />
-                <h5>@{username}</h5>
+                <h3>@{username}</h3>
             </Row>
             <Row className="d-flex justify-content-end">
                 <SendInfo/>
