@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Button, Form, Row, Col } from "react-bootstrap";
-import {
-  currentUserInfo,
-  currentChannelInfo,
-  currentAvatarInfo,
-  currentColorInfo,
-} from "../../../../components/modal/userInfoSlice";
+import { useSelector } from "react-redux";
+import { Button, Row, Col } from "react-bootstrap";
 import io from "socket.io-client";
+
+import { currentUserInfo, currentAvatarInfo, currentColorInfo } from "../../../../components/modal/userInfoSlice";
+
 import "./message.css";
+
 const socket = io();
 
 export default function SendMessage() {
@@ -30,26 +28,33 @@ export default function SendMessage() {
       return false;
     }
   };
-
+  const clear = () => {
+    document.getElementById("chat").reset();}
   return (
-    <Row >
-      <Col xs="10">
+    <Row>
+      <Col sm="10" xs="8" className="input-wrapper">
+        <form
+        id="chat"
+        >
+          
         <input
           aria-label="Submit Message"
-          placeholder="enter message"
+          placeholder="Jump into the conversation..."
           className="input-form"
+          onfocus="this.value=''"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          type="text"
+          
+             
         />
+         </form>
+         
+          
+       
       </Col>
-      <Col xs="2">
-        <Button
-          onClick={submitMessage}
-          className="submit-button"
-          // onClick={ChatDisplay}
-        >
-          Send
-        </Button>
+      <Col sm="2" xs="4" className="button-wrapper">
+        <Button onClick={submitMessage}>Send</Button>
       </Col>
     </Row>
   );

@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ListGroup from "react-bootstrap/ListGroup";
-import { messageListReducer } from "../messages/messageListSlice";
-import { messageList } from "../messages/messageListSlice";
 import io from "socket.io-client";
-import "../../chatroom.css";
+
+import { messageList } from "../messages/messageListSlice";
+import { messageListReducer } from "../messages/messageListSlice";
+
+import "./chatdisplay.css";
+
 const socket = io();
 
 export default function ChatDisplay() {
@@ -25,6 +28,7 @@ export default function ChatDisplay() {
     }
     return textcolor;
   };
+
   const messagelist = chatMessage.map((chat) => {
     return (
       <ListGroup.Item
@@ -32,8 +36,10 @@ export default function ChatDisplay() {
           backgroundColor: `rgb(${chat.color.r}, ${chat.color.g}, ${chat.color.b})`,
           margin: "10px",
           borderRadius: "20px",
-          width: "auto",
+          width: "fit-content",
           color: textChange(chat.color.r, chat.color.g, chat.color.b),
+          fontFamily: "Montserrat",
+          fontSize: "1em",
         }}
       >
         {" "}

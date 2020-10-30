@@ -1,18 +1,13 @@
 
 .card-deck {
     width: 780px;    
-
 }
+
 .card-about {
     background-color: darkgray;
     width: 358px;
-
-
 }
 
-
-
-/* .card-img {
-    width: 358px;
-    height: 225px;
-} */
+.subtitle {
+    margin: -.5em auto -.5em auto;
+}

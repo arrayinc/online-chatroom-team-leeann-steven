@@ -40,12 +40,10 @@ export default function SendChannel() {
     const [show, setShow] = useState(false);
     const handleClose = () =>
         setShow(false) &
-        dispatch(setChannelReducer(currentChannelInfo)) &
         dispatch(
             channelListReducer(
                 <li>
                     <Button>#{currentChannelInfo}</Button>
-                    {/* <Button onClick={console.log("channels")}>#{currentChannelInfo}</Button>  */}
                 </li>
             )
         )

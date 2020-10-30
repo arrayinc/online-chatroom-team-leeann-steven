@@ -1,21 +1,17 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { allUsersList } from "../users/userListSlice";
-import { allUsersReducer } from "../users/userListSlice";
-import Button from "react-bootstrap/Button";
-import "./users.css";
+import React, { useState } from "react";
+import io from "socket.io-client";
+
+const socket = io();
 
 export default function UserListDisplay() {
-  const users = [useSelector(allUsersList)];
+  const [userArr, setUserArr] = useState([]);
 
-  const userlist =  users.map((users) => (
-     
-       
-    {users} 
-    
-   ));
+  socket.once("user list", (msg) => {
+    setUserArr(msg);
+  });
+  const userlist = userArr.map((user) => {
+    return <h5>@{user}</h5>;
+  });
 
-  return <div>
-    {users}
-    </div>;
+  return <div>{userlist}</div>;
 }
