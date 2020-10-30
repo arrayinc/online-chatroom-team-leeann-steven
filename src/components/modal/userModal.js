@@ -77,7 +77,7 @@ export default function SendInfo() {
   const handleChangeComplete = (color) => setCurrentColorInfo(color.rgb);
   return (
     <div>
-      <div className="user-info-button-container d-flex justify-content-end">
+      {/* <div className="user-info-button-container d-flex justify-content-end">
         <Button
           className="btn-sm edit-button"
           variant="dark"
@@ -85,7 +85,7 @@ export default function SendInfo() {
         >
           Edit
         </Button>
-      </div>
+      </div> */}
 
       <Modal show={show} onHide={handleClose} className="modal" centered>
         <Modal.Header closeButton>
