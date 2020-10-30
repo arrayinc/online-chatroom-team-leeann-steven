@@ -26,11 +26,11 @@ export function Chatroom() {
   return (
     <div>
       <Jumbotron>
-      <h1>WELCOME TO THE CONVERSATION</h1>
+        <h1>WELCOME TO THE CONVERSATION</h1>
       </Jumbotron>
       <Container fluid>
         <Row>
-          <Col xl="2" sm="3" xs="4" >
+          <Col xl="2" sm="3" xs="4">
             <div className="users-sidebar">
               <h4>Joined conversation as:</h4>
               <Dashboard />

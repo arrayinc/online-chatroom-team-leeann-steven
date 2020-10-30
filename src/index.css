@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Staatliches&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Staatliches', 'Monserrat','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Staatliches", "Monserrat", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -17,30 +18,39 @@ code {
   height: 200px;
   color: white;
   text-align: center;
-  background: linear-gradient(90deg, rgba(213,1,1,1) 0%, rgba(73,9,121,1) 50%, rgba(0,35,209,1) 100%)!important;
-  border-radius: 0!important;
+  background: linear-gradient(
+    90deg,
+    rgba(213, 1, 1, 1) 0%,
+    rgba(73, 9, 121, 1) 50%,
+    rgba(0, 35, 209, 1) 100%
+  ) !important;
+  border-radius: 0 !important;
 }
 
 /*----------FONT STYLES---------*/
 
-h1, h2, h4 {
-  font-family: 'Staatliches', sans-serif;
+h1,
+h2,
+h4 {
+  font-family: "Staatliches", sans-serif;
 }
 
-h3, h5, p {
-  font-family: 'Montserrat', serif;
+h3,
+h5,
+p {
+  font-family: "Montserrat", serif;
   font-size: 18px;
 }
 
 h1 {
   font-size: 4em;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   line-height: 1.4em;
   color: white;
 }
 
 h2 {
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   line-height: 1.2em;
   font-size: 2.75em;
 }
@@ -50,12 +60,12 @@ h3 {
 }
 
 h4 {
- font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 h5 {
   font-size: 1.25em;
-  color: #343A40;
+  color: #343a40;
 }
 
 /* END FONT STYLES */

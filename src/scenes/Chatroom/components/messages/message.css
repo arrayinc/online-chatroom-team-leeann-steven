@@ -1,19 +1,18 @@
 .input-form {
-    height: 50px;
-    width: 100%;
-    margin: 10px;
+  height: 50px;
+  width: 100%;
+  margin: 10px;
 }
 
 .submit-button {
-   
 }
 
 .button-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-wrapper {
-    width: 100%;
+  width: 100%;
 }
