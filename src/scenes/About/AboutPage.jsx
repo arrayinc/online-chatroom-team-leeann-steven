@@ -26,7 +26,7 @@ export default class AboutPage extends React.Component {
               
               <Container fluid>
               <Row className="d-flex justify-content-center">
-                <CardDeck>
+                {/* <CardDeck> */}
                   <Accordion defaultActiveKey="1">
                     <Card className="text-center card-about">
                       <Card.Img variant="top" src= {LeeAnn} />
@@ -69,7 +69,7 @@ export default class AboutPage extends React.Component {
                       </Card.Text>
                     </Card.Body>
                   </Card> */}
-                </CardDeck>
+                {/* </CardDeck> */}
               </Row>
               </Container>
             </div>
