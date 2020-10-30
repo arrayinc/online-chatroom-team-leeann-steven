@@ -30,6 +30,7 @@ import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
 import { GithubPicker } from "react-color";
 import io from "socket.io-client";
 import "./modal.css";
+
 const socket = io();
 
 export default function SendInfo() {
@@ -48,7 +49,7 @@ export default function SendInfo() {
     socket.emit("user", currentUserInfo);
   };
 
-  const handleShow = () => setShow(true);
+ //Matt, we are sure you will love these many lines of code here, and below ;) 
   const handleClick1 = () => setCurrentAvatarInfo(avatar1);
   const handleClick2 = () => setCurrentAvatarInfo(avatar2);
   const handleClick3 = () => setCurrentAvatarInfo(avatar3);
@@ -93,64 +94,64 @@ export default function SendInfo() {
             variant="info"
           >
             <Dropdown.Item onClick={handleClick1} placeholder="#avatar">
-              <img src={avatar1} />
+              <img src={avatar1} alt="avatar1"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick2} placeholder="#avatar">
-              <img src={avatar2} />
+              <img src={avatar2} alt="avatar2"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick3} placeholder="#avatar">
-              <img src={avatar3} />
+              <img src={avatar3} alt="avatar3"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick4} placeholder="#avatar">
-              <img src={avatar4} />
+              <img src={avatar4} alt="avatar4"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick5} placeholder="#avatar">
-              <img src={avatar5} />
+              <img src={avatar5} alt="avatar5"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick6} placeholder="#avatar">
-              <img src={avatar6} />
+              <img src={avatar6} alt="avatar6"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick7} placeholder="#avatar">
-              <img src={avatar7} />
+              <img src={avatar7} alt="avatar7"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick8} placeholder="#avatar">
-              <img src={avatar8} />
+              <img src={avatar8} alt="avatar8"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick9} placeholder="#avatar">
-              <img src={avatar9} />
+              <img src={avatar9} alt="avatar9"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick10} placeholder="#avatar">
-              <img src={avatar10} />
+              <img src={avatar10} alt="avatar10"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick11} placeholder="#avatar">
-              <img src={avatar11} />
+              <img src={avatar11} alt="avatar11"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick12} placeholder="#avatar">
-              <img src={avatar12} />
+              <img src={avatar12} alt="avatar12"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick13} placeholder="#avatar">
-              <img src={avatar13} />
+              <img src={avatar13} alt="avatar13"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick14} placeholder="#avatar">
-              <img src={avatar14} />
+              <img src={avatar14} alt="avatar14"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick15} placeholder="#avatar">
-              <img src={avatar15} />
+              <img src={avatar15} alt="avatar15"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick16} placeholder="#avatar">
-              <img src={avatar16} />
+              <img src={avatar16} alt="avatar16"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick17} placeholder="#avatar">
-              <img src={avatar17} />
+              <img src={avatar17} alt="avatar17"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick18} placeholder="#avatar">
-              <img src={avatar18} />
+              <img src={avatar18} alt="avatar18"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick19} placeholder="#avatar">
-              <img src={avatar19} />
+              <img src={avatar19} alt="avatar19"/>
             </Dropdown.Item>
             <Dropdown.Item onClick={handleClick20} placeholder="#avatar">
-              <img src={avatar20} />
+              <img src={avatar20} alt="avatar20"/>
             </Dropdown.Item>
           </DropdownButton>
           <br></br>
