@@ -22,15 +22,11 @@ app.use(session({ secret: "Truly a secret" }));
 //app.use(express.bodyParser({extended: true})); //Matt used bodyParser here instead of express
 app.use(cors()); //LG added
 
-
-
-
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
   });
 });
-
 
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'build', 'index.html'))); //added
 
