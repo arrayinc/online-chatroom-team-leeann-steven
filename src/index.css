@@ -20,32 +20,38 @@ code {
   background: linear-gradient(90deg, rgba(213,1,1,1) 0%, rgba(73,9,121,1) 50%, rgba(0,35,209,1) 100%)!important;
   border-radius: 0!important;
 }
-
-h5 {
-  color: #343A40;
+h1, h2, h4 {
+  font-family: 'Staatliches', sans-serif;
 }
 
-p, h3, h4, h5 {
+h3, h5, p {
+  font-family: 'Montserrat', serif;
   font-size: 18px;
-  font-family: 'Montserrat;' 
 }
 
 h1 {
-  font-family: 'Staatliches';
+  font-size: 4em;
   letter-spacing: .1em;
   line-height: 1.4em;
   color: white;
-  font-size: 80px;
 }
 
 h2 {
-  font-family: 'Staatliches';
   letter-spacing: .1em;
   line-height: 1.2em;
-  font-size: 60px;
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
 }
 
 h4 {
-  font-family: 'Staatliches';
+ font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+  color: #343A40;
 }
 

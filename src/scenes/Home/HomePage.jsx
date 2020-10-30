@@ -17,7 +17,7 @@ export default class HomePage extends React.Component {
           <Row className="d-flex justify-content-center">
             <Col md="8" lg="6">
               <div className="text-container">
-                <h2>The 2020 general election is just days away. </h2>
+                <h2>The 2020 general election is just <i>days away. </i></h2>
                 <h5>
                   From the candidates to the issues to the future we share -
                   there's a lot to discuss. Click below to join The
@@ -41,27 +41,8 @@ export default class HomePage extends React.Component {
                   </p>
                 </Card.Text>
               </Card.Body>
-              <Button className="btn-rounded align-self-center btn-red">
-                Enter
-              </Button>
-            </Card>
-            <Card className="text-center card-home dark-card">
-              <Card.Body>
-                <Card.Title>
-                  <h4>
-                    CREATE A <br></br>
-                    <b>CUSTOM CHATROOM</b>
-                  </h4>
-                </Card.Title>
-                <Card.Text>
-                  <p>
-                    Start a new chat about your own topic and invite friends to
-                    join.
-                  </p>
-                </Card.Text>
-              </Card.Body>
               <Button className="btn-rounded align-self-center btn-blue">
-                Join
+                Enter
               </Button>
             </Card>
           </Row>
