@@ -35,7 +35,7 @@ import "./modal.css";
 export default function SendInfo() {
   const dispatch = useDispatch();
   const [currentUserInfo, setCurrentUserInfo] = useState("");
-  const [currentAvatarInfo, setCurrentAvatarInfo] = useState(""); 
+  const [currentAvatarInfo, setCurrentAvatarInfo] = useState("");
   const [currentColorInfo, setCurrentColorInfo] = useState("");
   const [show, setShow] = useState(true);
   const handleClose = () =>
@@ -45,21 +45,20 @@ export default function SendInfo() {
       allUsersReducer(
         <li>
           <Button>{currentUserInfo}</Button>
-  
         </li>
       )
     ) &
-  //LG   dispatch(setChannelReducer(currentChannelInfo)) &
-  // dispatch(
-  //   channelListReducer(
-  //     <li>
-  //       <Button>#{currentChannelInfo}</Button>
-  //       {/* <Button onClick={console.log("channels")}>#{currentChannelInfo}</Button>  */}
-  //     </li>
-  //   )
-  // ) & 
-  dispatch(setAvatarReducer(currentAvatarInfo)) &
-  dispatch(setColorReducer(currentColorInfo));
+    //LG   dispatch(setChannelReducer(currentChannelInfo)) &
+    // dispatch(
+    //   channelListReducer(
+    //     <li>
+    //       <Button>#{currentChannelInfo}</Button>
+    //       {/* <Button onClick={console.log("channels")}>#{currentChannelInfo}</Button>  */}
+    //     </li>
+    //   )
+    // ) &
+    dispatch(setAvatarReducer(currentAvatarInfo)) &
+    dispatch(setColorReducer(currentColorInfo));
 
   const handleShow = () => setShow(true);
   const handleClick1 = () => setCurrentAvatarInfo(avatar1);
@@ -85,34 +84,32 @@ export default function SendInfo() {
   const handleChangeComplete = (color) => setCurrentColorInfo(color.rgb);
   return (
     <div>
-      <div>
-          <div className="user-info-button-container d-flex justify-content-end">
-            <Button
-              className="btn-sm edit-button"
-              variant="dark"
-              onClick={handleShow}
-            >
-              Edit
-            </Button>
-          </div>
-       
+      <div className="user-info-button-container d-flex justify-content-end">
+        <Button
+          className="btn-sm edit-button"
+          variant="dark"
+          onClick={handleShow}
+        >
+          Edit
+        </Button>
+      </div>
 
-        <Modal show={show} onHide={handleClose} className="modal" centered>
-          <Modal.Header closeButton>
-            <Modal.Title> Please complete the fields below</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <label>Username: </label>
-            <input
-              value={currentUserInfo}
-              onChange={(e) => setCurrentUserInfo(e.target.value)}
-              className="form-field"
-              placeholder="@username" //css in chatbox.css
-            />
-            <br></br>
-            <br></br>
+      <Modal show={show} onHide={handleClose} className="modal" centered>
+        <Modal.Header closeButton>
+          <Modal.Title> Please complete the fields below</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <label>Username: </label>
+          <input
+            value={currentUserInfo}
+            onChange={(e) => setCurrentUserInfo(e.target.value)}
+            className="form-field"
+            placeholder="@username" //css in chatbox.css
+          />
+          <br></br>
+          <br></br>
 
-            {/*LG <label>Channel: </label>
+          {/*LG <label>Channel: </label>
             <input
               value={currentChannelInfo}
               onChange={(e) => setCurrentChannelInfo(e.target.value)}
@@ -120,86 +117,88 @@ export default function SendInfo() {
               placeholder="#channel" //css in chatbox.css
             /> */}
 
-            <DropdownButton id="dropdown-basic-button" title="Select an avatar" variant="info">
-              <Dropdown.Item onClick={handleClick1} placeholder="#avatar">
-                <img src={avatar1} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick2} placeholder="#avatar">
-                <img src={avatar2} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick3} placeholder="#avatar">
-                <img src={avatar3} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick4} placeholder="#avatar">
-                <img src={avatar4} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick5} placeholder="#avatar">
-                <img src={avatar5} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick6} placeholder="#avatar">
-                <img src={avatar6} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick7} placeholder="#avatar">
-                <img src={avatar7} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick8} placeholder="#avatar">
-                <img src={avatar8} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick9} placeholder="#avatar">
-                <img src={avatar9} />
-              </Dropdown.Item> 
-              <Dropdown.Item onClick={handleClick10} placeholder="#avatar">
-                <img src={avatar10} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick11} placeholder="#avatar">
-                <img src={avatar11} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick12} placeholder="#avatar">
-                <img src={avatar12} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick13} placeholder="#avatar">
-                <img src={avatar13} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick14} placeholder="#avatar">
-                <img src={avatar14} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick15} placeholder="#avatar">
-                <img src={avatar15} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick16} placeholder="#avatar">
-                <img src={avatar16} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick17} placeholder="#avatar">
-                <img src={avatar17} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick18} placeholder="#avatar">
-                <img src={avatar18} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick19} placeholder="#avatar">
-                <img src={avatar19} />
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleClick20} placeholder="#avatar">
-                <img src={avatar20} />
-              </Dropdown.Item>
-            </DropdownButton>
-            <br></br>
-           
+          <DropdownButton
+            id="dropdown-basic-button"
+            title="Select an avatar"
+            variant="info"
+          >
+            <Dropdown.Item onClick={handleClick1} placeholder="#avatar">
+              <img src={avatar1} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick2} placeholder="#avatar">
+              <img src={avatar2} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick3} placeholder="#avatar">
+              <img src={avatar3} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick4} placeholder="#avatar">
+              <img src={avatar4} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick5} placeholder="#avatar">
+              <img src={avatar5} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick6} placeholder="#avatar">
+              <img src={avatar6} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick7} placeholder="#avatar">
+              <img src={avatar7} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick8} placeholder="#avatar">
+              <img src={avatar8} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick9} placeholder="#avatar">
+              <img src={avatar9} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick10} placeholder="#avatar">
+              <img src={avatar10} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick11} placeholder="#avatar">
+              <img src={avatar11} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick12} placeholder="#avatar">
+              <img src={avatar12} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick13} placeholder="#avatar">
+              <img src={avatar13} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick14} placeholder="#avatar">
+              <img src={avatar14} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick15} placeholder="#avatar">
+              <img src={avatar15} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick16} placeholder="#avatar">
+              <img src={avatar16} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick17} placeholder="#avatar">
+              <img src={avatar17} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick18} placeholder="#avatar">
+              <img src={avatar18} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick19} placeholder="#avatar">
+              <img src={avatar19} />
+            </Dropdown.Item>
+            <Dropdown.Item onClick={handleClick20} placeholder="#avatar">
+              <img src={avatar20} />
+            </Dropdown.Item>
+          </DropdownButton>
+          <br></br>
 
-            <label>Chat bubble color: </label>
-            <br></br>
-            <GithubPicker onChangeComplete={handleChangeComplete} />
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="dark" onClick={handleClose}>
-              Submit
-            </Button>
-            {/* {console.log(currentUserInfo)}
+          <label>Chat bubble color: </label>
+          <br></br>
+          <GithubPicker onChangeComplete={handleChangeComplete} />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="dark" onClick={handleClose}>
+            Submit
+          </Button>
+          {/* {console.log(currentUserInfo)}
             {console.log(currentChannelInfo)}
             {console.log(currentAvatarInfo)}
             {console.log(currentColorInfo)} */}
-          </Modal.Footer>
-        </Modal>
-      </div>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
