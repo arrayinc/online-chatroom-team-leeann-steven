@@ -22,11 +22,13 @@ export default class HomePage extends React.Component {
                   is just days away.
                 </h2>
                 <h5>
-                  There's a lot to discuss - from <i>who's </i>on the ballot, to{" "}
+                  There's a lot to discuss - from <i>who's </i>on the ballot, to
                   <i>what's </i>on the ballot, to how it all connects to the
-                  future we share. <br />
+                  future we share. </h5>
+                  <br /><br />
+                  <h3>
                   Click below to join The Conversation.
-                </h5>
+                  </h3>
               </div>
             </Col>
           </Row>
