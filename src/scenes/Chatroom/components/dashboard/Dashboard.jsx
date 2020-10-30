@@ -10,7 +10,7 @@ import "./dashboard.css";
 export default function Dashboard() {
   const username = useSelector(currentUserInfo);
   const avatar = useSelector(currentAvatarInfo);
-  const channel = useSelector(currentChannelInfo);
+  
 
   return (
     <Container>
