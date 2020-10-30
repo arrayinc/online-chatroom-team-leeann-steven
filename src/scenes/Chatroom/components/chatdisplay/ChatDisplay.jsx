@@ -37,6 +37,8 @@ export default function ChatDisplay() {
           borderRadius: "20px",
           width: "auto",
           color: textChange(chat.color.r, chat.color.g, chat.color.b),
+          fontFamily: 'Montserrat',
+          fontSize: "1em"
         }}
       >
         {" "}
