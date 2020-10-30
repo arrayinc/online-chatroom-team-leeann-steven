@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
   userInfoReducer,
-  setChannelReducer,
   setAvatarReducer,
   setColorReducer,
 } from "./userInfoSlice";
@@ -27,17 +26,13 @@ import avatar18 from "./images/18.svg";
 import avatar19 from "./images/19.svg";
 import avatar20 from "./images/20.svg";
 
-import { allUsersReducer } from "../../../src/scenes/Chatroom/components/users/userListSlice";
 import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
 import { GithubPicker } from "react-color";
-
 import io from "socket.io-client";
-
-
 import "./modal.css";
 const socket = io();
+
 export default function SendInfo() {
- 
   const dispatch = useDispatch();
   const [currentUserInfo, setCurrentUserInfo] = useState("");
   const [currentAvatarInfo, setCurrentAvatarInfo] = useState("");
@@ -46,12 +41,12 @@ export default function SendInfo() {
   const handleClose = () =>
     setShow(false) &
     dispatch(userInfoReducer(currentUserInfo)) &
-  dispatch(setAvatarReducer(currentAvatarInfo)) &
-  dispatch(setColorReducer(currentColorInfo)) &
-  sendUser ();
-    const sendUser = () => {
+    dispatch(setAvatarReducer(currentAvatarInfo)) &
+    dispatch(setColorReducer(currentColorInfo)) &
+    sendUser();
+  const sendUser = () => {
     socket.emit("user", currentUserInfo);
-     };
+  };
 
   const handleShow = () => setShow(true);
   const handleClick1 = () => setCurrentAvatarInfo(avatar1);
@@ -77,6 +72,7 @@ export default function SendInfo() {
   const handleChangeComplete = (color) => setCurrentColorInfo(color.rgb);
   return (
     <div>
+<<<<<<< HEAD
       {/* <div className="user-info-button-container d-flex justify-content-end">
         <Button
           className="btn-sm edit-button"
@@ -88,6 +84,9 @@ export default function SendInfo() {
       </div> */}
 
       <Modal show={show} onHide={handleClose} className="modal" centered>
+=======
+      <Modal show={show} onHide={handleClose} centered>
+>>>>>>> 963ce2dd527eb00b07b0f76da2cfb3413d6ee2eb
         <Modal.Header closeButton>
           <Modal.Title> Please complete the fields below</Modal.Title>
         </Modal.Header>
@@ -97,18 +96,10 @@ export default function SendInfo() {
             value={currentUserInfo}
             onChange={(e) => setCurrentUserInfo(e.target.value)}
             className="form-field"
-            placeholder="@username" //css in chatbox.css
+            placeholder="@username"
           />
           <br></br>
           <br></br>
-
-          {/*LG <label>Channel: </label>
-            <input
-              value={currentChannelInfo}
-              onChange={(e) => setCurrentChannelInfo(e.target.value)}
-              className="form-field"
-              placeholder="#channel" //css in chatbox.css
-            /> */}
 
           <DropdownButton
             id="dropdown-basic-button"
@@ -186,10 +177,6 @@ export default function SendInfo() {
           <Button variant="dark" onClick={handleClose}>
             Submit
           </Button>
-          {/* {console.log(currentUserInfo)}
-            {console.log(currentChannelInfo)}
-            {console.log(currentAvatarInfo)}
-            {console.log(currentColorInfo)} */}
         </Modal.Footer>
       </Modal>
     </div>

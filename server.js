@@ -1,5 +1,3 @@
-
-
 const express = require("express");
 const app = express();
 const http = require("http").Server(app);
@@ -13,17 +11,14 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
+app.use(express.static(path.join(__dirname, "build"))); 
 
-app.use(express.static(path.join(__dirname, "build"))); //added
-
-app.use(favicon(path.join(__dirname, "public", "ivoted-favicon.png"))); //added
+app.use(favicon(path.join(__dirname, "public", "ivoted-favicon.png"))); 
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(session({ secret: "Truly a secret" }));
 
-
-app.use(cors()); //LG added
-
+app.use(cors()); 
 
 io.on("connection", function (socket) {
   socket.on("chat message", function (msg) {
@@ -34,26 +29,25 @@ io.on("connection", function (socket) {
 let userList = [];
 
 io.on("connection", function (socket) {
-  let currentUser = null
+  let currentUser = null;
   socket.on("user", function (msg) {
-    currentUser = msg
+    currentUser = msg;
     userList.push(msg);
     io.emit("user list", userList) & console.log(userList);
-    
   });
   socket.on("disconnect", () => {
     const index = userList.indexOf(currentUser);
     if (index > -1) {
-        userList.splice(index, 1) 
-        console.log(userList) 
-        io.emit("user list", userList);
+      userList.splice(index, 1);
+      console.log(userList);
+      io.emit("user list", userList);
     }
   });
 });
 
 app.get("*", (req, res) =>
   res.sendFile(path.join(__dirname, "build", "index.html"))
-); //added
+); 
 
 http.listen(port, function () {
   console.log("listening on *:" + port);
