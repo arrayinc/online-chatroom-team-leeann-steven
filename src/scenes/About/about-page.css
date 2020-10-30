@@ -11,3 +11,7 @@
 .subtitle {
     margin: -.5em auto -.5em auto;
 }
+
+.left-justify {
+    justify-content: left;
+}

@@ -36,7 +36,7 @@ export default function SendMessage() {
       <Col sm="10" xs="8" className="input-wrapper">
         <input
           aria-label="Submit Message"
-          placeholder="enter message"
+          placeholder="Jump into the conversation..."
           className="input-form"
           value={message}
           onChange={(e) => setMessage(e.target.value)}

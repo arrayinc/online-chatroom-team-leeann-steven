@@ -39,7 +39,7 @@ export default class AboutPage extends React.Component {
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
-                    <Card.Body>
+                    <Card.Body className="left-justify">
                       <p><b>LeeAnn is a longtime community organizer </b> who loves to help people find their power through voting. 
                       <br /><br />  
                       When not sneakily sliding questions about your voter registration status into conversation, she will happily discuss politics, books, and travel plans with you over coffee at any time of day. 
@@ -62,7 +62,7 @@ export default class AboutPage extends React.Component {
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
-                    <Card.Body>
+                    <Card.Body className="left-justify">
                       <p><b>Steven is a man of many talents </b> who can't pass up a thought-provoking conversation about current events.
                       <br /><br />
                       He is passionate about his community and empowering people through knowledge, as he has worked as an educator, a storyteller, and a problem-solver during the coronavirus pandemic in Wyoming. 

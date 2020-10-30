@@ -25,7 +25,7 @@ export default class HomePage extends React.Component {
                   There's a lot to discuss - from <i>who's </i>on the ballot, to
                   <i>what's </i>on the ballot, to how it all connects to the
                   future we share. </h5>
-                  <br /><br />
+                  <br />
                   <h3>
                   Click below to join The Conversation.
                   </h3>
