@@ -33,11 +33,14 @@ import { allUsersReducer } from "../../../src/scenes/Chatroom/components/users/u
 
 import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
 import { GithubPicker } from "react-color";
+import io from "socket.io-client";
+
 //SS - testing
 //const handleClickUsers = () => console.log({currentUserInfo});
 import "./modal.css";
-
+const socket = io();
 export default function SendInfo() {
+ 
   const dispatch = useDispatch();
   const [currentUserInfo, setCurrentUserInfo] = useState("");
   const [currentAvatarInfo, setCurrentAvatarInfo] = useState(""); 
@@ -47,14 +50,7 @@ export default function SendInfo() {
   const handleClose = () =>
     setShow(false) &
     dispatch(userInfoReducer(currentUserInfo)) &
-    dispatch(
-      allUsersReducer(
-        <li>
-          <Button>{currentUserInfo}</Button>
-          {/* <Button onClick={handleClickUsers}>{currentUserInfo}</Button> */}
-        </li>
-      )
-    ) &
+   
   //LG   dispatch(setChannelReducer(currentChannelInfo)) &
   // dispatch(
   //   channelListReducer(
@@ -65,7 +61,25 @@ export default function SendInfo() {
   //   )
   // ) & 
   dispatch(setAvatarReducer(currentAvatarInfo)) &
-  dispatch(setColorReducer(currentColorInfo));
+  dispatch(setColorReducer(currentColorInfo)) &
+  sendUser ();
+  
+
+
+  // dispatch(
+  //   allUsersReducer(
+  //     <li>
+  //       <Button>{currentUserInfo}</Button>
+  //       {/* <Button onClick={handleClickUsers}>{currentUserInfo}</Button> */}
+  //     </li>
+  //   )
+  // ) ;
+
+  const sendUser = () => {
+    socket.emit("user", currentUserInfo);
+     };
+
+     
 
   const handleShow = () => setShow(true);
   const handleClick1 = () => setCurrentAvatarInfo(avatar1);

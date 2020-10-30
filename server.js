@@ -30,6 +30,23 @@ io.on('connection', function(socket){
   });
 });
 
+let userList = []
+
+io.on('connection', function(socket){
+  socket.on('user', function(msg){
+    userList.push(msg);
+    io.emit('user list', userList) & console.log(userList);
+    socket.on("disconnect", () => {
+      const index = userList.indexOf(msg);
+      if (index > -1) {
+        userList.splice(index, 1) & console.log(userList) &
+        io.emit('user list', userList);
+      }
+    } )
+  });
+});
+
+
 // io.on("connection", (socket) => {
 //   console.log("beep");
 //   socket.on("disconnect", () => {

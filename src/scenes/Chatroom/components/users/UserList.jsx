@@ -1,21 +1,53 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { allUsersList } from "../users/userListSlice";
 import { allUsersReducer } from "../users/userListSlice";
 import Button from "react-bootstrap/Button";
 import "./users.css";
+import io from "socket.io-client";
+const socket = io();
+
+
+
+
 
 export default function UserListDisplay() {
-  const users = [useSelector(allUsersList)];
-
-  const userlist =  users.map((users) => (
-     
-       
-    {users} 
-    
-   ));
+  const dispatch = useDispatch();
+  const users = useSelector(allUsersList);
+  socket.once('user list', (msg) => {
+    dispatch(allUsersReducer(msg));
+  });
+  const userlist =  users.map((users) => {
+     return (
+    <li>
+          <Button>{users}</Button>
+           {/* <Button onClick={handleClickUsers}>{currentUserInfo}</Button> */}
+         </li>
+     );
+     });
 
   return <div>
-    {users}
+    
+    {userlist}
     </div>;
 }
+// const messagelist = chatMessage.map((chat) => {
+//   return (
+//     <ListGroup.Item
+//       style={{
+//         backgroundColor: `rgb(${chat.color.r}, ${chat.color.g}, ${chat.color.b})`,
+//         margin: "10px",
+//         borderRadius: "20px",
+//         width: "auto",
+//         color: textChange(chat.color.r, chat.color.g, chat.color.b),
+//       }}
+//     >
+//       {" "}
+//       <img src={chat.avatar} className="chat-bubble-avatar" />{" "}
+//       <b>@{chat.username}</b>: {chat.message}
+//     </ListGroup.Item>
+//   );
+// });
+
+// return <div>{messagelist}</div>;
+// }
