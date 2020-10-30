@@ -22,9 +22,6 @@ app.use(session({ secret: "Truly a secret" }));
 //app.use(express.bodyParser({extended: true})); //Matt used bodyParser here instead of express
 app.use(cors()); //LG added
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/public/index.html');
-});
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
@@ -32,12 +29,6 @@ io.on('connection', function(socket){
   });
 });
 
-// io.on("connection", (socket) => {
-//   console.log("beep");
-//   socket.on("disconnect", () => {
-//     console.log("boop");
-//   });
-// });
 
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'build', 'index.html'))); //added
 
