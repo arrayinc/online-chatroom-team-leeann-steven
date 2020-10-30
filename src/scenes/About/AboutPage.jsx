@@ -26,8 +26,8 @@ export default class AboutPage extends React.Component {
               
               <Container fluid>
               <Row className="d-flex justify-content-center">
-                {/* <CardDeck> */}
-                  <Accordion defaultActiveKey="1">
+                <CardDeck>
+                  <Accordion>
                     <Card className="text-center card-about">
                       <Card.Img variant="top" src= {LeeAnn} />
                         <Card.Title><h2>LeeAnn</h2></Card.Title>
@@ -43,7 +43,7 @@ export default class AboutPage extends React.Component {
                         </Accordion.Collapse>
                     </Card>
                   </Accordion>
-                  <Accordion defaultActiveKey="1">
+                  <Accordion>
                     <Card className="text-center card-about">
                       <Card.Img variant="top" src= {Steven} />
                         <Card.Title><h2>Steven</h2></Card.Title>
@@ -59,17 +59,7 @@ export default class AboutPage extends React.Component {
                         </Accordion.Collapse>
                     </Card>
                   </Accordion>
-
-                  {/* <Card className="text-center card-about">
-                    <Card.Img variant="top" src= {Steven} />
-                    <Card.Body>
-                      <Card.Title><h2>Steven</h2></Card.Title>
-                      <Card.Text>
-                        Click here to meet Steven! 
-                      </Card.Text>
-                    </Card.Body>
-                  </Card> */}
-                {/* </CardDeck> */}
+                </CardDeck>
               </Row>
               </Container>
             </div>
