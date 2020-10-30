@@ -1,3 +1,8 @@
-.contact-submit{
-    
+.dropdown-menu {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.modal {
+    width: 200px;
 }
