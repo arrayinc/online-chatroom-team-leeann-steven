@@ -1,19 +1,21 @@
-var app = require("express")();
-const express = require("express")();
-// const app = express();
-var http = require("http").Server(app);
-var io = require("socket.io")(http);
-var port = process.env.PORT || 3001;
-
-//const router = express.Router();
+//var app = require("express")();
+const express = require("express");
+const app = express();
+const http = require("http").Server(app);
+const io = require("socket.io")(http);
+const port = process.env.PORT || 3001;
+const favicon = require("serve-favicon");
+const router = express.Router();
 const path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const { isObject } = require("util");
 
+app.use(express.static(path.join(__dirname, 'build'))); //added
+
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico'))); //added
 app.use(cookieParser());
 app.use(bodyParser.json()); //LG added
 app.use(session({ secret: "Truly a secret" }));
@@ -37,14 +39,7 @@ io.on('connection', function(socket){
 //   });
 // });
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, 'build')));
-// Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  });
-}
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'build', 'index.html'))); //added
 
 http.listen(port, function () {
   console.log("listening on *:" + port);
