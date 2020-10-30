@@ -32,25 +32,15 @@ export default function SendMessage() {
   return (
     <Row>
       <Col sm="10" xs="8" className="input-wrapper">
-        <form
-        id="chat"
-        >
           
         <input
           aria-label="Submit Message"
           placeholder="Jump into the conversation..."
           className="input-form"
-          onfocus="this.value=''"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          type="text"
-          
-             
+          type="text"   
         />
-         </form>
-         
-          
-       
       </Col>
       <Col sm="2" xs="4" className="button-wrapper">
         <Button onClick={submitMessage}>Send</Button>
