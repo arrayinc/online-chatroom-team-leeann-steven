@@ -1,5 +1,5 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState} from "react";
+import {useDispatch, useSelector } from "react-redux";
 import { allUsersList } from "../users/userListSlice";
 import { allUsersReducer } from "../users/userListSlice";
 import Button from "react-bootstrap/Button";
@@ -12,15 +12,16 @@ const socket = io();
 
 
 export default function UserListDisplay() {
+  const [userArr, setUserArr] = useState([]);
   const dispatch = useDispatch();
-  const users = useSelector(allUsersList);
+ 
   socket.once('user list', (msg) => {
-    dispatch(allUsersReducer(msg));
+    setUserArr(msg);
   });
-  const userlist =  users.map((users) => {
+  const userlist =  userArr.map((user) => {
      return (
     <li>
-          <Button>{users}</Button>
+          <Button>{user}</Button>
            {/* <Button onClick={handleClickUsers}>{currentUserInfo}</Button> */}
          </li>
      );
