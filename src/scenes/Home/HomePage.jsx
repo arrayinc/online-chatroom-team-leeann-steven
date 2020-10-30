@@ -43,7 +43,7 @@ export default class HomePage extends React.Component {
                 </Card.Title>
                 <Card.Text>
                   <p>
-                    Jump into the current conversation and add your perspective.
+                    Jump into the current conversation.
                   </p>
                 </Card.Text>
               </Card.Body>
