@@ -16,7 +16,7 @@ const session = require("express-session");
 
 app.use(express.static(path.join(__dirname, "build"))); //added
 
-app.use(favicon(path.join(__dirname, "public", "favicon.ico"))); //added
+app.use(favicon(path.join(__dirname, "public", "ivoted-favicon.png"))); //added
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(session({ secret: "Truly a secret" }));
