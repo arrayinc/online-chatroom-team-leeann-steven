@@ -8,6 +8,18 @@
   background-color: gainsboro;
   padding: 10%;
   overflow: scroll;
+  background: linear-gradient(0deg, rgba(213,1,1,1) 0%, rgba(73,9,121,1) 50%, rgba(0,35,209,1) 100%)!important;
+}
+
+.overlay {
+  background-color: #000;
+  opacity: 0.5; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 /* CHATBOX STYLES */
