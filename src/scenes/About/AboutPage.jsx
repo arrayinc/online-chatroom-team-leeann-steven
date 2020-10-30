@@ -31,7 +31,7 @@ export default class AboutPage extends React.Component {
                   <Card.Img variant="top" src={LeeAnn} />
                   <Card.Title>
                     <h2>LeeAnn</h2>
-                    <h4>Grapes</h4>
+                    <h4 className="subtitle">Grapes</h4>
                   </Card.Title>
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
@@ -54,7 +54,7 @@ export default class AboutPage extends React.Component {
                   <Card.Img variant="top" src={Steven} />
                   <Card.Title>
                     <h2>Steven</h2>
-                    <h4>Spicher</h4>
+                    <h4 className="subtitle">Spicher</h4>
                   </Card.Title>
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="1">

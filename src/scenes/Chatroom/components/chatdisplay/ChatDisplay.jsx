@@ -35,7 +35,7 @@ export default function ChatDisplay() {
           backgroundColor: `rgb(${chat.color.r}, ${chat.color.g}, ${chat.color.b})`,
           margin: "10px",
           borderRadius: "20px",
-          width: "auto",
+          width: "fit-content",
           color: textChange(chat.color.r, chat.color.g, chat.color.b),
           fontFamily: 'Montserrat',
           fontSize: "1em"
