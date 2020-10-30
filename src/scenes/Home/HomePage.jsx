@@ -22,13 +22,12 @@ export default class HomePage extends React.Component {
                   is just days away.
                 </h2>
                 <h5>
-                  There's a lot to discuss - from <i>who's </i>on the ballot, to
-                  <i>what's </i>on the ballot, to how it all connects to the
-                  future we share. </h5>
-                  <br />
-                  <h3>
-                  Click below to join The Conversation.
-                  </h3>
+                  There's a lot to discuss - from <i>who's</i> on the ballot, to
+                  <i>what's</i> on the ballot, to how it all connects to the
+                  future we share.
+                </h5>
+                <br />
+                <h3>Click below to join The Conversation.</h3>
               </div>
             </Col>
           </Row>
@@ -42,9 +41,7 @@ export default class HomePage extends React.Component {
                   </h4>
                 </Card.Title>
                 <Card.Text>
-                  <p>
-                    Jump into the current conversation.
-                  </p>
+                  <p>Jump into the current conversation.</p>
                 </Card.Text>
               </Card.Body>
               <Button

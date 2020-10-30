@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ListGroup from "react-bootstrap/ListGroup";
 import { messageListReducer } from "../messages/messageListSlice";
@@ -26,9 +26,7 @@ export default function ChatDisplay() {
     return textcolor;
   };
 
-  
   const messagelist = chatMessage.map((chat) => {
-    
     return (
       <ListGroup.Item
         style={{
@@ -37,8 +35,8 @@ export default function ChatDisplay() {
           borderRadius: "20px",
           width: "fit-content",
           color: textChange(chat.color.r, chat.color.g, chat.color.b),
-          fontFamily: 'Montserrat',
-          fontSize: "1em"
+          fontFamily: "Montserrat",
+          fontSize: "1em",
         }}
       >
         {" "}

@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { allUsersList } from "../users/userListSlice";
-import { allUsersReducer } from "../users/userListSlice";
-import Button from "react-bootstrap/Button";
-import "./users.css";
+import { useDispatch } from "react-redux";
 import io from "socket.io-client";
 const socket = io();
 
@@ -15,33 +11,8 @@ export default function UserListDisplay() {
     setUserArr(msg);
   });
   const userlist = userArr.map((user) => {
-    return (
-  
-        <h5>@{user}</h5>
-       
-     
-    );
+    return <h5>@{user}</h5>;
   });
 
   return <div>{userlist}</div>;
 }
-// const messagelist = chatMessage.map((chat) => {
-//   return (
-//     <ListGroup.Item
-//       style={{
-//         backgroundColor: `rgb(${chat.color.r}, ${chat.color.g}, ${chat.color.b})`,
-//         margin: "10px",
-//         borderRadius: "20px",
-//         width: "auto",
-//         color: textChange(chat.color.r, chat.color.g, chat.color.b),
-//       }}
-//     >
-//       {" "}
-//       <img src={chat.avatar} className="chat-bubble-avatar" />{" "}
-//       <b>@{chat.username}</b>: {chat.message}
-//     </ListGroup.Item>
-//   );
-// });
-
-// return <div>{messagelist}</div>;
-// }

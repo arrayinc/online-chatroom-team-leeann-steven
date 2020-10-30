@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Button, Form, Row, Col } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import { Button, Row, Col } from "react-bootstrap";
 import {
   currentUserInfo,
-  currentChannelInfo,
   currentAvatarInfo,
   currentColorInfo,
 } from "../../../../components/modal/userInfoSlice";
@@ -43,13 +42,7 @@ export default function SendMessage() {
         />
       </Col>
       <Col sm="2" xs="4" className="button-wrapper">
-        <Button
-          onClick={submitMessage}
-          className="submit-button"
-          // onClick={ChatDisplay}
-        >
-          Send
-        </Button>
+        <Button onClick={submitMessage}>Send</Button>
       </Col>
     </Row>
   );
