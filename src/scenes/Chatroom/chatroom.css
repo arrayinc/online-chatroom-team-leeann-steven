@@ -11,7 +11,7 @@
   color: white;
 }
 
-.overlay {
+/* .overlay {
   background-color: #000;
   opacity: 0.5; 
   position: absolute;
@@ -20,7 +20,7 @@
   bottom: 0;
   right: 0;
   z-index: -1;
-}
+} */
 
 /* CHATBOX STYLES */
 .chat-container {

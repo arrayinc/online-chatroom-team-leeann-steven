@@ -31,7 +31,7 @@ export function Chatroom() {
       <Container fluid>
         <Row>
           <Col xl="2" sm="3" xs="4">
-            <div className="users-sidebar overlay">
+            <div className="users-sidebar">
               <h4>Joined conversation as:</h4>
               <Dashboard />
               <hr></hr>
