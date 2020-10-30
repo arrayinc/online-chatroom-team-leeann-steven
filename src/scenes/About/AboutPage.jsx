@@ -47,7 +47,7 @@ export default class AboutPage extends React.Component {
               
               <Container fluid>
               <Row className="d-flex justify-content-center">
-                <AboutLeeAnn />
+                
                 <CardDeck>
                   <Accordion>
                     <Card className="text-center card-about">
