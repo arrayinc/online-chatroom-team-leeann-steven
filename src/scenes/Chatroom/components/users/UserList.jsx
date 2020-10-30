@@ -17,7 +17,7 @@ export default function UserListDisplay() {
   const userlist = userArr.map((user) => {
     return (
       <li>
-        <Button>{user}</Button>
+        <h5>@{user}</h5>
         {/* <Button onClick={handleClickUsers}>{currentUserInfo}</Button> */}
       </li>
     );
