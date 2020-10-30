@@ -27,6 +27,10 @@ code {
   border-radius: 0 !important;
 }
 
+.hr {
+  font-weight: 900;
+}
+
 /*----------FONT STYLES---------*/
 
 h1,
