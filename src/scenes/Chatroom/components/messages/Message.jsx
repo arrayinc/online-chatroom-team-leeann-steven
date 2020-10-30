@@ -32,8 +32,8 @@ export default function SendMessage() {
   };
 
   return (
-    <Row >
-      <Col xs="10">
+    <Row>
+      <Col sm="10" xs="8" className="input-wrapper">
         <input
           aria-label="Submit Message"
           placeholder="enter message"
@@ -42,7 +42,7 @@ export default function SendMessage() {
           onChange={(e) => setMessage(e.target.value)}
         />
       </Col>
-      <Col xs="2">
+      <Col sm="2" xs="4" className="button-wrapper">
         <Button
           onClick={submitMessage}
           className="submit-button"

@@ -1,8 +1,28 @@
+/* MODAL STYLES */
+
+.modal {
+  /* width: 200px;
+  height: 200px;
+  position: relative; */
+}
+
 .dropdown-menu {
   max-height: 200px;
   overflow-y: scroll;
 }
 
-.modal {
-    width: 200px;
+.user-info-button-container {
+  height: auto;
 }
+
+.form-field {
+  width: 100%;
+}
+
+.edit-button {
+  margin-top: 10%;
+}
+
+/* END MODAL STYLES */
+
+

@@ -1,11 +1,19 @@
-.chat-bubble {
-
+.input-form {
+    height: 50px;
+    width: 100%;
+    margin: 10px;
 }
 
-.chat-bubble-avatar {
-    margin-right: 5px;
-    margin-left: -10px;
-    border-radius: 30px;
-    height: 35px;
+.submit-button {
+   
 }
 
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-wrapper {
+    width: 100%;
+}

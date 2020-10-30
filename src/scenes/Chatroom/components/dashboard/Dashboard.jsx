@@ -20,9 +20,7 @@ export default function Dashboard() {
                 <h5>@{username}</h5>
             </Row>
             <Row>
-                <div className="button-container">
-                    <SendInfo/>
-                </div>
+                <SendInfo/>
             </Row>
         </Container>
     )
