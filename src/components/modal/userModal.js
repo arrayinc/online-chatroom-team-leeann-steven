@@ -27,21 +27,15 @@ import avatar18 from "./images/18.svg";
 import avatar19 from "./images/19.svg";
 import avatar20 from "./images/20.svg";
 
-//SS - added for user and channel lists
-//LG import { channelListReducer } from "../../scenes/Chatroom/components/channels/channelListSlice";
 import { allUsersReducer } from "../../../src/scenes/Chatroom/components/users/userListSlice";
-
 import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
 import { GithubPicker } from "react-color";
-//SS - testing
-//const handleClickUsers = () => console.log({currentUserInfo});
 import "./modal.css";
 
 export default function SendInfo() {
   const dispatch = useDispatch();
   const [currentUserInfo, setCurrentUserInfo] = useState("");
   const [currentAvatarInfo, setCurrentAvatarInfo] = useState(""); 
-  //LG const [currentChannelInfo, setCurrentChannelInfo] = useState("");
   const [currentColorInfo, setCurrentColorInfo] = useState("");
   const [show, setShow] = useState(true);
   const handleClose = () =>
@@ -51,7 +45,7 @@ export default function SendInfo() {
       allUsersReducer(
         <li>
           <Button>{currentUserInfo}</Button>
-          {/* <Button onClick={handleClickUsers}>{currentUserInfo}</Button> */}
+  
         </li>
       )
     ) &

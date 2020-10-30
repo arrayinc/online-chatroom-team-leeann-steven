@@ -43,7 +43,7 @@ p {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 2em;
   letter-spacing: 0.1em;
   line-height: 1.4em;
   color: white;
@@ -52,7 +52,7 @@ h1 {
 h2 {
   letter-spacing: 0.1em;
   line-height: 1.2em;
-  font-size: 2.75em;
+  font-size: 1.75em;
 }
 
 h3 {
@@ -69,18 +69,38 @@ h5 {
 }
 
 /*MEDIA QUERIES*/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .jumbotron h1 {
-      font-size: 2em;
-  }
+  h1 {
+    font-size: 2.5em;
+ }
+ h2 {
+   font-size: 2em;
+ }
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .jumbotron h1 {
-      font-size: 3em;
-  }
+@media (min-width: 992px) { 
+  h1 {
+    font-size: 3em;
+ }
+ h2 {
+  font-size: 2.5em;
+}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4em;
+ }
+ h2 {
+  font-size: 3em;
+}
 }
 
 /* END FONT STYLES */
