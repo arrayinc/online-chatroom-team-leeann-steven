@@ -30,12 +30,11 @@ export default function ChatDisplay() {
       <ListGroup.Item
         style={{
           backgroundColor: `rgb(${chat.color.r}, ${chat.color.g}, ${chat.color.b})`,
-          // margin: "10px",
-          // borderRadius: "20px",
-          // width: "auto",
+          margin: "10px",
+          borderRadius: "20px",
+          width: "auto",
           color: textChange(chat.color.r, chat.color.g, chat.color.b),
         }}
-        className="chat-bubble"
       >
         {" "}
         <img src={chat.avatar} className="chat-bubble-avatar" />{" "}
