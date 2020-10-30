@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
+import { Container, Row, Jumbotron, Card, CardDeck, Accordion, Accordion } from 'react-bootstrap';
 
 export default class AboutPage extends React.Component {
     render() {      
@@ -27,12 +28,17 @@ export default class AboutPage extends React.Component {
                 <CardDeck>
                   <Card className="text-center card-about">
                     <Card.Img variant="top" src= {LeeAnn} />
-                    <Card.Body >
                       <Card.Title><h2>LeeAnn</h2></Card.Title>
-                      <Card.Text>
-                        <p>Click here to meet LeeAnn!</p>
-                      </Card.Text>
-                    </Card.Body>
+                      <Card.Header>
+                        <Accordion.Toggle as={Button} eventKey="1">
+                          Meet her
+                        </Accordion.Toggle>
+                      </Card.Header>
+                      <Accordion.Collapse eventKey="0">
+                        <Card.Body >
+                          LeeAnn is from Casper and loves to get out the vote.
+                        </Card.Body>
+                      </Accordion.Collapse>
                   </Card>
                   <Card className="text-center card-about">
                     <Card.Img variant="top" src= {Steven} />

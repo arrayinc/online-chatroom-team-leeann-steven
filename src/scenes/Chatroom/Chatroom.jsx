@@ -26,8 +26,7 @@ export function Chatroom() {
   return (
     <div>
       <Jumbotron>
-        <h2>Welcome to the</h2>
-        <h1>CONVERSATION</h1>
+      <h1>WELCOME TO THE CONVERSATION</h1>
       </Jumbotron>
       <Container fluid>
         <Row>

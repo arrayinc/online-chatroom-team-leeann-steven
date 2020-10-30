@@ -14,13 +14,12 @@ export default class HomePage extends React.Component {
           <h1>WELCOME TO THE CONVERSATION</h1>
         </Jumbotron>
         <Container fluid>
-          <Row className="d-flex justify-content-center">
+          <Row className="d-flex justify-content-center text-center">
             <Col md="8" lg="6">
               <div className="text-container">
-                <h2>The 2020 general election is just <i>days away. </i></h2>
+                <h2>The 2020 election <br />is just days away.</h2>
                 <h5>
-                  From the candidates to the issues to the future we share -
-                  there's a lot to discuss. Click below to join The
+                  There's a lot to discuss - from <i>who's </i>on the ballot, to <i>what's </i>on the ballot, to how it all connects to the future we share. <br />Click below to join The
                   Conversation.
                 </h5>
               </div>
@@ -36,9 +35,9 @@ export default class HomePage extends React.Component {
                   </h4>
                 </Card.Title>
                 <Card.Text>
-                  <h5>
+                  <p>
                     Jump into the current conversation and add your perspective.
-                  </h5>
+                  </p>
                 </Card.Text>
               </Card.Body>
               <Button href="/chat" className="btn-rounded align-self-center btn-blue">
