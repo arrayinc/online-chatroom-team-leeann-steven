@@ -18,16 +18,10 @@ export const dashboardSlice = createSlice({
         },
         setAvatar: (state, action) => {
             state.user.avatar = action.payload;
-        },
-        setChannel: (state, action) => {
-            state.channel = {
-                name: action.payload.name,
-                type: action.payload.type
-            }
         }
     },
 });
 
-export const { setUsername, setAvatar, setChannel } = dashboardSlice.actions;
+export const { setUsername, setAvatar } = dashboardSlice.actions;
 export const currentDashboard = state => state.dashboard;
 export default dashboardSlice.reducer;

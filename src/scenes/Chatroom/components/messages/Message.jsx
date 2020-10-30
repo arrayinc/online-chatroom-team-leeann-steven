@@ -30,17 +30,30 @@ export default function SendMessage() {
       return false;
     }
   };
-
+  const clear = () => {
+    document.getElementById("chat").reset();}
   return (
     <Row>
       <Col sm="10" xs="8" className="input-wrapper">
+        <form
+        id="chat"
+        >
+          
         <input
           aria-label="Submit Message"
           placeholder="enter message"
           className="input-form"
+          onfocus="this.value=''"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          type="text"
+          
+             
         />
+         </form>
+         
+          
+       
       </Col>
       <Col sm="2" xs="4" className="button-wrapper">
         <Button

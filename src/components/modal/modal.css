@@ -1,11 +1,5 @@
 /* MODAL STYLES */
 
-.modal {
-  /* width: 200px;
-  height: 200px;
-  position: relative; */
-}
-
 .dropdown-menu {
   max-height: 200px;
   overflow-y: scroll;
