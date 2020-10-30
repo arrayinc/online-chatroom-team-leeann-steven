@@ -35,6 +35,7 @@ import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
 import { GithubPicker } from "react-color";
 //SS - testing
 //const handleClickUsers = () => console.log({currentUserInfo});
+import "./modal.css";
 
 export default function SendInfo() {
   const dispatch = useDispatch();
@@ -91,7 +92,7 @@ export default function SendInfo() {
   return (
     <div>
       <div>
-        <center>
+       
           <div className="user-info-button-container">
             {/* <h4>Get started here:</h4> */}
             <Button
@@ -102,7 +103,7 @@ export default function SendInfo() {
               Edit
             </Button>
           </div>
-        </center>
+       
 
         <Modal show={show} onHide={handleClose} className="modal" centered>
           <Modal.Header closeButton>
@@ -129,7 +130,7 @@ export default function SendInfo() {
             <br></br>
             <br></br>
 
-            <DropdownButton id="dropdown-basic-button" title="Choose an Avatar">
+            <DropdownButton id="dropdown-basic-button" title="Choose an Avatar" >
               <Dropdown.Item onClick={handleClick1} placeholder="#avatar">
                 <img src={avatar1} />
               </Dropdown.Item>
