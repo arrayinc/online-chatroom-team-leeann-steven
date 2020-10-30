@@ -68,4 +68,19 @@ h5 {
   color: #343a40;
 }
 
+/*MEDIA QUERIES*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .jumbotron h1 {
+      font-size: 2em;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .jumbotron h1 {
+      font-size: 3em;
+  }
+}
+
 /* END FONT STYLES */

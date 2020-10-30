@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../index.css";
 import "./about-page.css";
 
@@ -12,7 +12,7 @@ import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
-import Collapse from "react-bootstrap/Collapse";
+
 
 export default class AboutPage extends React.Component {
   render() {
@@ -31,6 +31,7 @@ export default class AboutPage extends React.Component {
                   <Card.Img variant="top" src={LeeAnn} />
                   <Card.Title>
                     <h2>LeeAnn</h2>
+                    <h4>Grapes</h4>
                   </Card.Title>
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
@@ -39,7 +40,11 @@ export default class AboutPage extends React.Component {
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                      <p><b>LeeAnn is a longtime community organizer </b> who loves to help people find their power through voting. <br />  When not sneakily sliding questions about your voter registration status into conversation, she will happily discuss politics, books, and travel plans with you over coffee at any time of day. <br /> Originally from Casper, she is a new transplant to Cheyenne, WY.</p>
+                      <p><b>LeeAnn is a longtime community organizer </b> who loves to help people find their power through voting. 
+                      <br /><br />  
+                      When not sneakily sliding questions about your voter registration status into conversation, she will happily discuss politics, books, and travel plans with you over coffee at any time of day. 
+                      <br /><br /> 
+                      Originally from Casper, she is a new transplant to Cheyenne, WY.</p>
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
@@ -49,6 +54,7 @@ export default class AboutPage extends React.Component {
                   <Card.Img variant="top" src={Steven} />
                   <Card.Title>
                     <h2>Steven</h2>
+                    <h4>Spicher</h4>
                   </Card.Title>
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="1">
@@ -57,7 +63,11 @@ export default class AboutPage extends React.Component {
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
                     <Card.Body>
-                      <p><b>Steven is a man of many talents </b>and interests who can't pass up a thought-provoking conversation about current events. <br />He is passionate about his community and empowering people through knowledge, as he has worked as an educator, a storyteller, and a problem-solver during the coronavirus pandemic in Wyoming. <br />Steven lives in Casper with his wife and has three children. </p>
+                      <p><b>Steven is a man of many talents </b> who can't pass up a thought-provoking conversation about current events.
+                      <br /><br />
+                      He is passionate about his community and empowering people through knowledge, as he has worked as an educator, a storyteller, and a problem-solver during the coronavirus pandemic in Wyoming. 
+                      <br /><br />
+                      Steven lives in Casper with his wife and has three children. </p>
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>
