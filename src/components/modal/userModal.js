@@ -72,21 +72,7 @@ export default function SendInfo() {
   const handleChangeComplete = (color) => setCurrentColorInfo(color.rgb);
   return (
     <div>
-<<<<<<< HEAD
-      {/* <div className="user-info-button-container d-flex justify-content-end">
-        <Button
-          className="btn-sm edit-button"
-          variant="dark"
-          onClick={handleShow}
-        >
-          Edit
-        </Button>
-      </div> */}
-
-      <Modal show={show} onHide={handleClose} className="modal" centered>
-=======
       <Modal show={show} onHide={handleClose} centered>
->>>>>>> 963ce2dd527eb00b07b0f76da2cfb3413d6ee2eb
         <Modal.Header closeButton>
           <Modal.Title> Please complete the fields below</Modal.Title>
         </Modal.Header>
