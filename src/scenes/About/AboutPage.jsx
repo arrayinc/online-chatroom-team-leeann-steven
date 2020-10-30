@@ -12,7 +12,6 @@ import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
-import Link from 'react-bootstrap/Link';
 
 export default class AboutPage extends React.Component {
     render() {      
@@ -49,7 +48,7 @@ export default class AboutPage extends React.Component {
                       <Card.Img variant="top" src= {Steven} />
                         <Card.Title><h2>Steven</h2></Card.Title>
                         <Card.Header>
-                          <Accordion.Toggle as={Link} eventKey="1">
+                          <Accordion.Toggle as={Button} variant="link" eventKey="1">
                             <p>Click here to meet him</p>
                           </Accordion.Toggle>
                         </Card.Header>
