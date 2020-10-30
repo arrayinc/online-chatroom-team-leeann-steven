@@ -27,20 +27,23 @@ export default class AboutPage extends React.Component {
               <Container fluid>
               <Row className="d-flex justify-content-center">
                 <CardDeck>
-                  <Card className="text-center card-about">
-                    <Card.Img variant="top" src= {LeeAnn} />
-                      <Card.Title><h2>LeeAnn</h2></Card.Title>
-                      <Card.Header>
-                        <Accordion.Toggle as={Button} eventKey="1">
-                          Meet her
-                        </Accordion.Toggle>
-                      </Card.Header>
-                      <Accordion.Collapse eventKey="0">
-                        <Card.Body >
-                          LeeAnn is from Casper and loves to get out the vote.
-                        </Card.Body>
-                      </Accordion.Collapse>
-                  </Card>
+                  <Accordion defaultActiveKey="0">
+                    <Card className="text-center card-about">
+                      <Card.Img variant="top" src= {LeeAnn} />
+                        <Card.Title><h2>LeeAnn</h2></Card.Title>
+                        <Card.Header>
+                          <Accordion.Toggle as={Button} eventKey="1">
+                            Click here to meet her
+                          </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="0">
+                          <Card.Body >
+                            LeeAnn is from Casper and loves to get out the vote.
+                          </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                  </Accordion>
+
                   <Card className="text-center card-about">
                     <Card.Img variant="top" src= {Steven} />
                     <Card.Body>
