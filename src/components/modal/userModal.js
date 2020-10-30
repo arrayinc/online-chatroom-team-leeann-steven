@@ -127,10 +127,8 @@ export default function SendInfo() {
               className="form-field"
               placeholder="#channel" //css in chatbox.css
             /> */}
-            <br></br>
-            <br></br>
 
-            <DropdownButton id="dropdown-basic-button" title="Choose an Avatar" >
+            <DropdownButton id="dropdown-basic-button" title="Select an avatar" variant="info">
               <Dropdown.Item onClick={handleClick1} placeholder="#avatar">
                 <img src={avatar1} />
               </Dropdown.Item>
@@ -193,9 +191,9 @@ export default function SendInfo() {
               </Dropdown.Item>
             </DropdownButton>
             <br></br>
-            <br></br>
+           
 
-            <label>Chat bubble background color: </label>
+            <label>Chat bubble color: </label>
             <br></br>
             <GithubPicker onChangeComplete={handleChangeComplete} />
           </Modal.Body>

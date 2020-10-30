@@ -3,3 +3,6 @@
   overflow-y: scroll;
 }
 
+.modal {
+    width: 200px;
+}
