@@ -11,6 +11,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
 
 export default class AboutPage extends React.Component {
     render() {      
