@@ -30,9 +30,14 @@ import avatar20 from "./images/20.svg";
 import { allUsersReducer } from "../../../src/scenes/Chatroom/components/users/userListSlice";
 import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
 import { GithubPicker } from "react-color";
-import "./modal.css";
 
+import io from "socket.io-client";
+
+
+import "./modal.css";
+const socket = io();
 export default function SendInfo() {
+ 
   const dispatch = useDispatch();
   const [currentUserInfo, setCurrentUserInfo] = useState("");
   const [currentAvatarInfo, setCurrentAvatarInfo] = useState("");
@@ -41,24 +46,12 @@ export default function SendInfo() {
   const handleClose = () =>
     setShow(false) &
     dispatch(userInfoReducer(currentUserInfo)) &
-    dispatch(
-      allUsersReducer(
-        <li>
-          <Button>{currentUserInfo}</Button>
-        </li>
-      )
-    ) &
-    //LG   dispatch(setChannelReducer(currentChannelInfo)) &
-    // dispatch(
-    //   channelListReducer(
-    //     <li>
-    //       <Button>#{currentChannelInfo}</Button>
-    //       {/* <Button onClick={console.log("channels")}>#{currentChannelInfo}</Button>  */}
-    //     </li>
-    //   )
-    // ) &
-    dispatch(setAvatarReducer(currentAvatarInfo)) &
-    dispatch(setColorReducer(currentColorInfo));
+  dispatch(setAvatarReducer(currentAvatarInfo)) &
+  dispatch(setColorReducer(currentColorInfo)) &
+  sendUser ();
+    const sendUser = () => {
+    socket.emit("user", currentUserInfo);
+     };
 
   const handleShow = () => setShow(true);
   const handleClick1 = () => setCurrentAvatarInfo(avatar1);

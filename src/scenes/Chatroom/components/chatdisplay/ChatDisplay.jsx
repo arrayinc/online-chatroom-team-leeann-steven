@@ -25,7 +25,10 @@ export default function ChatDisplay() {
     }
     return textcolor;
   };
+
+  
   const messagelist = chatMessage.map((chat) => {
+    
     return (
       <ListGroup.Item
         style={{
