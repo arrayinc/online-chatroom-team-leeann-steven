@@ -20,6 +20,9 @@ code {
   background: linear-gradient(90deg, rgba(213,1,1,1) 0%, rgba(73,9,121,1) 50%, rgba(0,35,209,1) 100%)!important;
   border-radius: 0!important;
 }
+
+/*----------FONT STYLES---------*/
+
 h1, h2, h4 {
   font-family: 'Staatliches', sans-serif;
 }
@@ -55,3 +58,4 @@ h5 {
   color: #343A40;
 }
 
+/* END FONT STYLES */

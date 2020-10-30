@@ -36,12 +36,12 @@ export default class HomePage extends React.Component {
                   </h4>
                 </Card.Title>
                 <Card.Text>
-                  <p>
+                  <h5>
                     Jump into the current conversation and add your perspective.
-                  </p>
+                  </h5>
                 </Card.Text>
               </Card.Body>
-              <Button className="btn-rounded align-self-center btn-blue">
+              <Button href="/chat" className="btn-rounded align-self-center btn-blue">
                 Enter
               </Button>
             </Card>
