@@ -14,15 +14,21 @@ export default class HomePage extends React.Component {
           <h1>WELCOME TO THE CONVERSATION</h1>
         </Jumbotron>
         <Container fluid>
-          <Row className="d-flex justify-content-center">
+          <Row className="d-flex justify-content-center text-center">
             <Col md="8" lg="6">
               <div className="text-container">
-                <h2>The 2020 general election is just days away. </h2>
+                <h2>
+                  The 2020 election <br />
+                  is just days away.
+                </h2>
                 <h5>
-                  From the candidates to the issues to the future we share -
-                  there's a lot to discuss. Click below to join The
-                  Conversation.
-                </h5>
+                  There's a lot to discuss - from <i>who's </i>on the ballot, to
+                  <i>what's </i>on the ballot, to how it all connects to the
+                  future we share. </h5>
+                  <br /><br />
+                  <h3>
+                  Click below to join The Conversation.
+                  </h3>
               </div>
             </Col>
           </Row>
@@ -41,27 +47,11 @@ export default class HomePage extends React.Component {
                   </p>
                 </Card.Text>
               </Card.Body>
-              <Button className="btn-rounded align-self-center btn-red">
+              <Button
+                href="/chat"
+                className="btn-rounded align-self-center btn-blue"
+              >
                 Enter
-              </Button>
-            </Card>
-            <Card className="text-center card-home dark-card">
-              <Card.Body>
-                <Card.Title>
-                  <h4>
-                    CREATE A <br></br>
-                    <b>CUSTOM CHATROOM</b>
-                  </h4>
-                </Card.Title>
-                <Card.Text>
-                  <p>
-                    Start a new chat about your own topic and invite friends to
-                    join.
-                  </p>
-                </Card.Text>
-              </Card.Body>
-              <Button className="btn-rounded align-self-center btn-blue">
-                Join
               </Button>
             </Card>
           </Row>

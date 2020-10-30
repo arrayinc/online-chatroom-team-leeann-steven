@@ -1,8 +1,32 @@
+/* MODAL STYLES */
+
+.modal {
+  /* width: 200px;
+  height: 200px;
+  position: relative; */
+}
+
 .dropdown-menu {
   max-height: 200px;
   overflow-y: scroll;
 }
 
-.modal {
-    width: 200px;
+.user-info-button-container {
+  height: auto;
 }
+
+.form-field {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25em;
+}
+
+.label {
+  font-size: 1.5em;
+}
+
+.edit-button {
+  margin-top: 10%;
+}
+
+/* END MODAL STYLES */

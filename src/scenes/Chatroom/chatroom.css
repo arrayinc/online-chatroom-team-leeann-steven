@@ -1,54 +1,30 @@
-.chat-container {
-    height: 530px;
-    border: solid 1px grey;
-    width: 100%;
-    overflow: scroll;
-}
+/* BEGIN CHATROOM COMPONENT PAGE STYLES */
 
-.chatroom-container {
-    
-}
-
-.input-form-box {
-    border: solid 1px grey; 
-    width: 100%; 
-    background-color:  gainsboro;
-}
-.input-form {
-    height: 50px;
-    width: 100%;
-    margin: 10px;
-}
-
-.submit-button {
-    margin-top: 10%;
-}
-
-.form-group {
-    padding: 10px;
-    width: 90%;
-}
+/* SIDEBAR STYLES */
 
 .users-sidebar {
-    width: auto;
-    height: 100%;
-    background-color: gainsboro;
-    padding: 10%;
+  width: 100%;
+  height: 600px;
+  background-color: gainsboro;
+  padding: 10%;
+  overflow: scroll;
 }
 
-.user-info-button-container {
-    height: auto;
+/* CHATBOX STYLES */
+.chat-container {
+  height: 530px;
+  border: solid 1px grey;
+  width: 100%;
+  overflow: scroll;
+  /* background: linear-gradient(90deg, rgba(213,1,1,1) 0%, rgba(73,9,121,1) 50%, rgba(0,35,209,1) 100%)!important; */
 }
 
-.form-field {
-    width: 100%;
+/* MESSAGE INPUT STYLES */
+
+.input-form-box {
+  border: solid 1px grey;
+  width: 100%;
+  background-color: gainsboro;
 }
 
-.modal {
-    height: 200px;
-    position: relative;
-}
-
-.edit-button {
-    margin-top: 10%;
-}
+/* END COMPONENT STYLES*/

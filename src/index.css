@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Staatliches&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Staatliches', 'Monserrat','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Staatliches", "Monserrat", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -17,34 +18,93 @@ code {
   height: 200px;
   color: white;
   text-align: center;
-  background: linear-gradient(90deg, rgba(213,1,1,1) 0%, rgba(73,9,121,1) 50%, rgba(0,35,209,1) 100%)!important;
-  border-radius: 0!important;
+  background: linear-gradient(
+    90deg,
+    rgba(213, 1, 1, 1) 0%,
+    rgba(73, 9, 121, 1) 50%,
+    rgba(0, 35, 209, 1) 100%
+  ) !important;
+  border-radius: 0 !important;
 }
 
-h5 {
-  color: #343A40;
+.hr {
+  font-weight: 900;
 }
 
-p, h3, h4, h5 {
+/*----------FONT STYLES---------*/
+
+h1,
+h2,
+h4 {
+  font-family: "Staatliches", sans-serif;
+}
+
+h3,
+h5,
+p {
+  font-family: "Montserrat", serif;
   font-size: 18px;
 }
 
 h1 {
-  font-family: 'Staatliches';
-  letter-spacing: .1em;
+  font-size: 2.75em;
+  letter-spacing: 0.1em;
   line-height: 1.4em;
   color: white;
-  font-size: 110px;
 }
 
 h2 {
-  font-family: 'Staatliches';
-  letter-spacing: .1em;
-  line-height: 1.4em;
-  font-size: 60px;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  font-size: 2.25em;
+}
+
+h3 {
+  font-size: 2em;
 }
 
 h4 {
-  font-family: 'Staatliches';
+  font-size: 1.5em;
 }
 
+h5 {
+  font-size: 1.25em;
+  color: #343a40;
+}
+
+/*MEDIA QUERIES*/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+ }
+ h2 {
+   font-size: 2.5em;
+ }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  h1 {
+    font-size: 3.5em;
+ }
+ h2 {
+  font-size: 3em;
+}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4.5em;
+ }
+ h2 {
+  font-size: 3.5em;
+}
+}
+
+/* END FONT STYLES */

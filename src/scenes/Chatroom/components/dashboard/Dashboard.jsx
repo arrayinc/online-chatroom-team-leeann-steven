@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import { currentUserInfo, currentChannelInfo, currentAvatarInfo } from "../../../../components/modal/userInfoSlice";
 import SendInfo from "../../../../components/modal/userModal";
@@ -19,10 +18,8 @@ export default function Dashboard() {
                 <img src={avatar} alt="avatar" className="dashboard-avatar" />
                 <h5>@{username}</h5>
             </Row>
-            <Row>
-                <div className="button-container">
-                    <SendInfo/>
-                </div>
+            <Row className="d-flex justify-content-end">
+                <SendInfo/>
             </Row>
         </Container>
     )
