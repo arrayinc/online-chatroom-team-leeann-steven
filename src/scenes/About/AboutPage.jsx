@@ -1,22 +1,16 @@
 import React from "react";
-import "./about-page.css";
+import { Container, Row, Jumbotron, Card, CardDeck, Accordion, Button } from "react-bootstrap";
 
 import Steven from "./images/steven.png";
 import LeeAnn from "./images/leeann.jpg";
 
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
-import Accordion from "react-bootstrap/Accordion";
-import Button from "react-bootstrap/Button";
+import "./about-page.css";
 
 export default class AboutPage extends React.Component {
   render() {
     return (
       <div>
-        <Jumbotron className="jumbo">
+        <Jumbotron>
           <h1>ABOUT US</h1>
         </Jumbotron>
         <Container fluid>

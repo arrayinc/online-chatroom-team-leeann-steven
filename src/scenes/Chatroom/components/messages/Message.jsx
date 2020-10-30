@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Button, Row, Col } from "react-bootstrap";
-import {
-  currentUserInfo,
-  currentAvatarInfo,
-  currentColorInfo,
-} from "../../../../components/modal/userInfoSlice";
 import io from "socket.io-client";
+
+import { currentUserInfo, currentAvatarInfo, currentColorInfo } from "../../../../components/modal/userInfoSlice";
+
 import "./message.css";
+
 const socket = io();
 
 export default function SendMessage() {

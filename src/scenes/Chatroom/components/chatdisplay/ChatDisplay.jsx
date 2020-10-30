@@ -1,10 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ListGroup from "react-bootstrap/ListGroup";
-import { messageListReducer } from "../messages/messageListSlice";
-import { messageList } from "../messages/messageListSlice";
 import io from "socket.io-client";
+
+import { messageList } from "../messages/messageListSlice";
+import { messageListReducer } from "../messages/messageListSlice";
+
 import "./chatdisplay.css";
+
 const socket = io();
 
 export default function ChatDisplay() {

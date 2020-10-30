@@ -1,8 +1,5 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { Jumbotron, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Jumbotron, Card, Button } from "react-bootstrap";
 
 import "./home-page.css";
 

@@ -1,12 +1,10 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import SendMessage from "./components/messages/Message.jsx";
-import ChatDisplay from "./components/chatdisplay/ChatDisplay.jsx";
+import { Container, Jumbotron, Row, Col } from "react-bootstrap";
+
 import Dashboard from "./components/dashboard/Dashboard";
 import UserList from "./components/users/UserList";
+import ChatDisplay from "./components/chatdisplay/ChatDisplay.jsx";
+import SendMessage from "./components/messages/Message.jsx";
 
 import "./chatroom.css";
 
