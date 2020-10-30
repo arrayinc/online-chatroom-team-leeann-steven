@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../index.css';
 import './about-page.css';
 
@@ -13,6 +13,26 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 
+const AboutLeeAnn = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+  return (
+    <div>
+      <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Toggle</Button>
+      <Collapse isOpen={isOpen}>
+        <Card>
+          <Card.Body>
+          Anim pariatur cliche reprehenderit,
+           enim eiusmod high life accusamus terry richardson ad squid. Nihil
+           anim keffiyeh helvetica, craft beer labore wes anderson cred
+           nesciunt sapiente ea proident.
+          </Card.Body>
+        </Card>
+      </Collapse>
+    </div>
+  );
+}
+
 export default class AboutPage extends React.Component {
     render() {      
         return (
@@ -26,6 +46,7 @@ export default class AboutPage extends React.Component {
               
               <Container fluid>
               <Row className="d-flex justify-content-center">
+                <AboutLeeAnn />
                 <CardDeck>
                   <Accordion>
                     <Card className="text-center card-about">
