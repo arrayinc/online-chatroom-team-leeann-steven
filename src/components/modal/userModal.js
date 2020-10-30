@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
+import { GithubPicker } from "react-color";
+import io from "socket.io-client";
+
 import {
   userInfoReducer,
   setAvatarReducer,
   setColorReducer,
 } from "./userInfoSlice";
+
 import avatar1 from "./images/1.svg";
 import avatar2 from "./images/2.svg";
 import avatar3 from "./images/3.svg";
@@ -26,9 +31,6 @@ import avatar18 from "./images/18.svg";
 import avatar19 from "./images/19.svg";
 import avatar20 from "./images/20.svg";
 
-import { Button, Modal, Dropdown, DropdownButton } from "react-bootstrap";
-import { GithubPicker } from "react-color";
-import io from "socket.io-client";
 import "./modal.css";
 
 const socket = io();
