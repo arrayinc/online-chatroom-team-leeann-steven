@@ -21,6 +21,7 @@ export const userInfoSlice = createSlice({
     },
     setColorReducer: (state, action) => {
       state.user.color = action.payload;
+     
     },
   },
 });
