@@ -12,6 +12,7 @@ import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
+import Link from 'react-bootstrap/Link';
 
 export default class AboutPage extends React.Component {
     render() {      
@@ -27,13 +28,13 @@ export default class AboutPage extends React.Component {
               <Container fluid>
               <Row className="d-flex justify-content-center">
                 <CardDeck>
-                  <Accordion defaultActiveKey="0">
+                  <Accordion defaultActiveKey="1">
                     <Card className="text-center card-about">
                       <Card.Img variant="top" src= {LeeAnn} />
                         <Card.Title><h2>LeeAnn</h2></Card.Title>
                         <Card.Header>
                           <Accordion.Toggle as={Button} eventKey="1">
-                            Click here to meet her
+                            <p>Click here to meet her</p>
                           </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="0">
@@ -43,8 +44,24 @@ export default class AboutPage extends React.Component {
                         </Accordion.Collapse>
                     </Card>
                   </Accordion>
+                  <Accordion defaultActiveKey="1">
+                    <Card className="text-center card-about">
+                      <Card.Img variant="top" src= {Steven} />
+                        <Card.Title><h2>Steven</h2></Card.Title>
+                        <Card.Header>
+                          <Accordion.Toggle as={Link} eventKey="1">
+                            <p>Click here to meet him</p>
+                          </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="0">
+                          <Card.Body >
+                            Steven is from Casper and is passionate about building up his community and the people in it.
+                          </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                  </Accordion>
 
-                  <Card className="text-center card-about">
+                  {/* <Card className="text-center card-about">
                     <Card.Img variant="top" src= {Steven} />
                     <Card.Body>
                       <Card.Title><h2>Steven</h2></Card.Title>
@@ -52,7 +69,7 @@ export default class AboutPage extends React.Component {
                         Click here to meet Steven! 
                       </Card.Text>
                     </Card.Body>
-                  </Card>
+                  </Card> */}
                 </CardDeck>
               </Row>
               </Container>
