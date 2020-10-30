@@ -10,7 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
-import { Container, Row, Jumbotron, Card, CardDeck, Accordion, Accordion } from 'react-bootstrap';
+import Accordion from 'react-bootstrap/Accordion';
 
 export default class AboutPage extends React.Component {
     render() {      
